@@ -1,0 +1,43 @@
+/***************************************************************************************************
+													TABLE OF CONTENTS
+***************************************************************************************************************
+1) Project details, 
+2) CSS Reset, color and color variables and typography details
+3) Global styles(tags, basic styling, buttons, images, foat and clear)
+4) Header and nav
+5) Main body content (grids, tables, forms, 
+6) Generic selectors (shared page class styles)
+
+7) Media queries
+
+**************************************************************************************/
+/************************************************************************************
+	1. 		 PROJECT DETAILS, COLOR
+
+	Author   :  Manisha Gupta, Andrew Burke, Tatiana Johnson
+  Project  :  Web Development Framework for home based food delivery business
+    Ver 		 :0.1
+**************************************************************************************/    
+
+@import "variables";
+// @import "color-themes";
+
+
+
+/************************************************************************************
+	2. 		 CSS RESET, MIXINS
+*************************************************************************************/
+@import "reset";
+@import "mixins";
+
+/************************************************************************************
+	3. 		 GLOBAL STYLES (TYPOGRAPHY, GRIDS, TABLES,FORMS, BUTTONS, IMAGES, FLOATS)
+*************************************************************************************/
+
+@import "globalStyles/typography";
+@import "globalStyles/grid";
+@import "globalStyles/tables";
+@import "globalStyles/forms";
+@import "globalStyles/buttons";
+@import "global";
+

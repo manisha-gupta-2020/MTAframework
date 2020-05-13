@@ -1,0 +1,20 @@
+
+
+
+//clear floats
+@mixin clearfix{
+    &:before, &:after{
+        content: '';
+        display: table; 
+    }
+    &:after{
+        clear: both;
+    }
+}
+
+// for applying media query
+@mixin break($length) {
+    @media (min-width: $length){
+        @content;
+    }
+}
