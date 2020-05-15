@@ -1,5 +1,10 @@
 
 
+//border color - pass 3 parameters type, thickness,color- how will the user use it unless they are using sass
+@mixin border($args...){
+    border: nth($args, 1),nth($args, 2), nth($args, 3);
+}
+
 
 //clear floats
 @mixin clearfix{
@@ -18,3 +23,25 @@
         @content;
     }
 }
+
+@mixin break($args...) { //args... allows it to accept any number of arguments
+    @if length($args) == 1 {
+       @media screen and (min-width: nth($args, 1)) {
+           @content;
+       }
+   }
+   @if length($args) == 2 {
+       @media screen and (min-width: nth($args, 1)) and 
+               (max-width: nth($args, 2)){
+           @content;
+       }
+   }    
+}
+
+// for applying media query at max-width
+@mixin break-max($length) {
+    @media (max-width: $length){
+        @content;
+    }
+}
+

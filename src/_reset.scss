@@ -6,16 +6,20 @@ header, main, nav, article, section, aside, details, figure, figcaption,  footer
     margin: 0;
     border: none;
     outline: none;
-    box-sizing: border-box; 
     margin: 0 auto;  
     font-family: inherit;
     color: $text-color-default;
     font-style: inherit;
     font-size: 10px;
     line-height: 1.5;
-
     vertical-align: baseline;
 }
+*,*:before,*:after{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
 html{   background-color: $background-html; }
 
 body{
@@ -24,7 +28,7 @@ body{
     // min-width: 330px; 
     margin: 0 auto;   
     font-family: inherit;
-    background-color: $background-body;
+    // background-color: $background-body;
     // background-color: #888;
     height: 100%;
     color: magenta;
