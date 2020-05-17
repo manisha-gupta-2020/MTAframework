@@ -11,16 +11,27 @@ $background-html: #fff;
 $background-body: #ccc;
 
 
-//table
-// $color-even-cells: lightpink;
-// $color-odd-cells: lightsteelblue;
-// $table-border: red;
-// $table-caption:lavender;
+//color variables for table
+
+$color-even-cells: lightpink;
+$color-odd-cells: lightsteelblue;
+$tbl-border:blue;
+$tbl-caption:rgb(151, 151, 209);
+$tbl-background: #fff; //rgb(223, 223, 247);
+$tbl-hdr-background: #dedede;
+$tbl-link: #008cba;
+$brk-md: 500px;
+$brk-lg: 760px;
+$brk-xl: 1000px;
+$border-radius: 4px;
 
 //maybe set these to inherit from browser
 $font-family: inherit;
 $font-family-body: inherit;
 $text-color-default: green;
+
+$button-background: #dedede;
+$button-border: #ccc;
 
 $breakpoint-xs: 400px;
 $breakpoint-sm: 600px;

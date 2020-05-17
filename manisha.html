@@ -3,14 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="dist/css/styles.min.css">
-    <!-- <link rel="stylesheet" href="responsive-table.css"> -->
-    <script src="dist/scripts/jquery-3.4.1.min.js"></script>
-    <!-- <script src="responsive-table.js"></script> -->
+       <!-- IE Fix for HTML5 Tags -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
+    <!-- link for font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+    <!-- link to bootstrap glyphicon cdn -->
+    <!-- <link rel="stylesheet" href="<link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">"> -->
+
+    <link rel="stylesheet" href="dist/css/styles.min.css">
+    <!-- <link rel="stylesheet" href="dist/css/buttons.css"> -->
+
+    <!--  link to jquery cdn-->
+    <script src="dist/scripts/jquery-3.4.1.min.js"></script>
+
+    <title>Framework examples</title>
 </head>
  <body class="cl-theme-bright">
+
     <h1>trying use of themes</h1>
     <div >
         <ul>
@@ -21,58 +34,61 @@
             <li>item5</li>
         </ul>
     </div>
-
-    <h2>trying out responsive table</h2>
-    
-    <h5>Medium table collapses to rows on small screen</h5>
-     
-    <table class="cl-table cl-rwd-table">
+ 
+    <section id="id-responsive-table-sm">
+      <h2>Example for using out responsive table classes on a small table.</h2>
+      <p>Small tables with a size of upto 3 columns beome responsive by collapsing to stacked rows on small screen. At  screen breakpoint of 500px they change to the normal table.</p>  
+      <h5>Use classes cl-table (for base styling) and cl-rwd-table(for responsive behavior)</h5>   
+      <table class="cl-table cl-rwd-table">
         <caption>Small table</caption>
         <thead>
-        <tr>
-            <th>Heading Col 1</th>
-            <th>Heading Col 2</th>
-            <th>Heading Col 3</th>
-        </tr>
+          <tr>
+              <th>Heading Col 1</th>
+              <th>Heading Col 2</th>
+              <th>Heading Col 3</th>
+          </tr>
         </thead>
         <tbody>
-        <tr>
-            <td>Data Col 1a</td>
-            <td>Data Col 2a</td>
-            <td>Data Col 3a</td>
-        </tr>
-        <tr>
-            <td>Data Col 1b</td>
-            <td>Data Col 2b</td>
-            <td>Data Col 3b</td>
-        </tr>
-        <tr>
-            <td>Data Col 1c</td>
-            <td>Data Col 2c</td>
-            <td>Data Col 3c</td>
-        </tr>
-        <tr>
-            <td>Data Col 1d</td>
-            <td>Data Col 2d</td>
-            <td>Data Col 3d</td>
-        </tr>
-        <tr>
-            <td>Data Col 1e</td>
-            <td>Data Col 2e</td>
-            <td>Data Col 3e</td>
-        </tr>
-        <tr>
-            <td>Data Col 1f</td>
-            <td>Data Col 2f</td>
-            <td>Data Col 3f</td>
-        </tr>
+          <tr>
+              <td>Data Col 1a</td>
+              <td>Data Col 2a</td>
+              <td>Data Col 3a</td>
+          </tr>
+          <tr>
+              <td>Data Col 1b</td>
+              <td>Data Col 2b</td>
+              <td>Data Col 3b</td>
+          </tr>
+          <tr>
+              <td>Data Col 1c</td>
+              <td>Data Col 2c</td>
+              <td>Data Col 3c</td>
+          </tr>
+          <tr>
+              <td>Data Col 1d</td>
+              <td>Data Col 2d</td>
+              <td>Data Col 3d</td>
+          </tr>
+          <tr>
+              <td>Data Col 1e</td>
+              <td>Data Col 2e</td>
+              <td>Data Col 3e</td>
+          </tr>
+          <tr>
+              <td>Data Col 1f</td>
+              <td>Data Col 2f</td>
+              <td>Data Col 3f</td>
+          </tr>
         </tbody>
-    </table>
-        
-        <p>Use the mixin 'responive-tables-large' and placehold 'responive-tables-large' to apply the styling sooner</p>
-    <h2>Mediuum table </h2>
+      </table>
+      </section>
+
+      <section id="id-responsive-table-md">
+        <h2>Example for using out responsive table classes on a medium size table.</h2>
+        <p>Medium tables with a size of upto 5 columns become responsive by collapsing to stacked rows on small screen. At screen breakpoint of 768px they change to the normal table.</p>  
+        <h5>Use classes cl-table (for base styling) and cl-rwd-table-md (for responsive behavior)</h5> 
     <table class="cl-table cl-rwd-table-md">
-        <caption>Medium table</caption>
+        <caption>Medium table example</caption>
         <thead>
         <tr>
             <th>Heading Col 1</th>
@@ -120,9 +136,14 @@
         </tr>
         </tbody>
     </table>   
+    </section>
 
-    <h2>Large table</h2>
-    <!-- <div class="  cl-rwd-table-lrg-wrap"> -->
+    <section id="id-responsive-table-lg">
+      <h2>Example for using out responsive table classes on a large size table.</h2>
+      <p>Tables are considered large if they have more than 6 columns with medium size data. </p>
+      <p>Tables becomes responsive by adding scoll bars to view the content. At screen breakpoint of 960px they change to the normal table.</p>  
+      <h5>Use classes cl-table (for base styling) and cl-rwd-table-large (for responsive behavior)</h5> 
+
         <table class="cl-table cl-rwd-table-large">
             <caption>Large table</caption>
             <thead>
@@ -201,7 +222,38 @@
             </tr>
             </tbody>
         </table> 
-    <!-- </div> -->
+    </section>
+ 
+  
+  <section id="buttons">
+      <div>
+          <h2>Default buttons</h2>
+          <button>Default</button>
+          <!-- <button type=submit>Button type submit</button> -->
+          <button>Default</button>
+          <input type="button" value="input type button">
+          <input type="submit" value="input type Submit">
+          <input type="reset" value="input type reset">
+      </div>
+      <div>
+        <h2>Button sizes</h2>
+        <button class="cl-btn-xsm">xsm button</button>
+        <button class="cl-btn-sm">sm button</button>
+        <button class="cl-btn">reg button</button>
+        <button class="cl-btn-lg">large button</button>
+        <button class="cl-btn-xlg">xl button</button>
+      </div>
+
+      <div>
+        <h2>Button Styles</h2>
+        <button class="cl-btn-sharp">sharp</button>
+        <button class="cl-btn-soft">soft</button>
+        <button class="cl-btn-oval">oval</button>
+        <button class="cl-btn-round">round</button>
+        <button class="cl-btn-shadow">3d</button>
+      </div>
+    </section>
+
     
 
  </body>

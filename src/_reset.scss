@@ -6,7 +6,7 @@ header, main, nav, article, section, aside, details, figure, figcaption,  footer
     margin: 0;
     border: none;
     outline: none;
-    margin: 0 auto;  
+    // margin: 0 auto;  
     font-family: inherit;
     color: $text-color-default;
     font-style: inherit;
@@ -20,7 +20,7 @@ header, main, nav, article, section, aside, details, figure, figcaption,  footer
     box-sizing: border-box;
   }
 
-html{   background-color: $background-html; }
+html{   background-color: #fff; }
 
 body{
     line-height: 1.5;
@@ -31,7 +31,7 @@ body{
     // background-color: $background-body;
     // background-color: #888;
     height: 100%;
-    color: magenta;
+    color: #000;
     // color: $text-color-default;
         /* advanced checkbox hack rules */
     // -webkit-animation: bugfix 1s;
@@ -44,6 +44,13 @@ ol, ul, li{ list-style-type: none;   }
 h1, h2, h3, h4, h5, h6, pre, code{  
     font-weight: normal;
     font-size: 100%;
+    margin-top: 0;
+    margin-bottom: 0.5rem;    
+}
+pre, code{  
+    font-weight: normal;
+    font-size: 100%;
+
 }
 
 /* remove possible quote marks (") from <q> & <blockquote> */
@@ -67,7 +74,7 @@ address,caption,cite,code,dfn,em,strong,th,td, var{
     
 caption,th,td {
     text-align: left;
-    vertical-align: center;
+    vertical-align: middle;
     }
 
 table {  
@@ -83,10 +90,7 @@ p{
     // margin-bottom: 1rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-  }
+
   
 
 

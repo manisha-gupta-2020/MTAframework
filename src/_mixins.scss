@@ -5,6 +5,12 @@
     border: nth($args, 1),nth($args, 2), nth($args, 3);
 }
 
+// class for no print noprint
+@media print { 
+    .noprint { 
+       visibility: hidden; 
+    } 
+}
 
 //clear floats
 @mixin clearfix{
