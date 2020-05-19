@@ -1,0 +1,46 @@
+//clear float
+.cl-clear-float{
+    @include clearfix;
+}
+// float left
+.cl-float-left{
+    float: left;
+    margin-right: 10px;
+}
+// float right
+.cl-float-left{
+    float: right;
+    margin-left: 10px;
+}
+/* responsive image*/
+.cl-img-fluid{
+    max-width: 100%;
+    height: auto;
+   }
+/* other possible image classes
+.cl-img-border{
+    border: solid 1px #ccc;
+}
+.cl-img-outline{}
+.cl-img-padding{}
+.cl-img-margin{5px 0;}
+*/
+
+  /*responsive map*/
+  .cl-map-wrapper{
+    position: relative;
+   padding-bottom:75%;/* h/w 450/600 .75*/
+   height: 0;
+   overflow: hidden;
+  }
+  .cl-map-wrapper iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+
+/*   responsive video */

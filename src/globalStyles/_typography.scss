@@ -1,30 +1,200 @@
-// styles for header
-// h1, .cl-h1{
+/* 
+This file has classes for
+bodycopy/paragraphs, inline text elements, alignments, abbreviations/addreses/bloackquote, text transformations, text shadows,border styles,LISTS (ul/ol), margin classes, padding classes
+*/
 
-// }
+/*text sixes
+screen   0-360px     361-640px      641-768px   768+
+p       1.4em         1.6em          1.8em      1.9em
+h1      1.9em         2.0em          2.3em      3em
+h2      1.8em         1.9em          2.1em      2.8em
+h3      1.7em         1.8            2.0em      2.5em
+h4      1.6em         1.7            1.9        2.0
+h5      1.5em         1.6            1.8        1.9
+h6      1.5em         1.6            1.8        1.9
+*/
 
 
-.cl-theme-med{
-    background-color: red;
+$txt-size-xs: 1.4em;
+$txt-size-sm: 1.8em;
+$txt-size-md: 1.9em;
+$txt-size-lg: 2em;
 
+// size of text and headings according to media query breakpoints
 
+@media screen and (min-width: $breakpoint-xs){ 
+    p, .p{ font-size: $txt-size-xs; }
+    h1, .h1{font-size: 1.9em;}
+    h2, .h2{font-size: 1.8em;}
+    h3, .h3{font-size: 1.7em;}
+    h4, .h4{font-size: 1.6em;}
+    h5, .h5{font-size: 1.5em;}
+    h6, .h6{font-size: 1.5em;}
+}
+@media screen and (min-width: $breakpoint-sm){
+    p{ font-size: $txt-size-sm; }
+    h1, .h1{font-size: 2em;}
+    h2, .h2{font-size: 1.9em;}
+    h3, .h3{font-size: 1.8em;}
+    h4, .h4{font-size: 1.7em;}
+    h5, .h5{font-size: 1.6em;}
+    h6, .h6{font-size: 1.6em;}
+}
+@media screen and (min-width: $breakpoint-md){
+    p{ font-size: $txt-size-md; }
+    h1, .h1{font-size: 2.3em;}
+    h2, .h2{font-size: 2.1em;}
+    h3, .h3{font-size: 2em;}
+    h4, .h4{font-size: 1.9em;}
+    h5, .h5{font-size: 1.8em;}
+    h6, .h6{font-size: 1.8;}
+}
+@media screen and (min-width: $breakpoint-lg){
+    p{ font-size: $txt-size-lg; }
+    h1, .h1{font-size: 3em;}
+    h2, .h2{font-size: 2.8em;}
+    h3, .h3{font-size: 2.5em;}
+    h4, .h4{font-size: 2em;}
+    h5, .h5{font-size: 1.9em;}
+    h6, .h6{font-size: 1.9em;}
 }
 
-.cl-theme-bright{
-    background-color: palegoldenrod;
+h1,h2,.h1,.h2{ 
+    padding: 1em .5em;
+    text-align: center;
+    font-weight: bold;
+}
+h3,h4,h5,h6,.h3,.h4,.h5,.h6{ 
+    padding: .8em .5em;
+    text-align: center;
+    font-weight: 300;
+}
+h5,h6,.h5,.h6{ 
+    padding: .5em .3em;
+    text-align: center;
+    font-weight: 300;
+}
+/*******    bodycopy/paragraphs   *********/
+.para{
+    padding: 1em .5em;
+    color: $black;
 }
 
-.cl-theme-drk{
-    background-color: yellowgreen;
+/*******inline text elements   *********/
+.cl-bold{font-weight: bold;}
+.cl-italic{font-style: italic}
+.cl-cite{font-style: italic;}
+.cl-code{
+    font-family: monospace;
+    color: crimson;
+    background-color: #f1f1f1;
+    padding: 2px;
+    font-size: 105%;
+}
+.cl-var{
+    font-style: italic;
+    font-weight: bold;
+    font-size: 110%;
+}
+/*******   horizontal alignments   *********/
+.cl-align-left{text-align: left;}
+.cl-align-right{text-align: right;}
+.cl-align-center{text-align: center;}
+
+/*******   vertical alignments   *********/
+.cl-valign-top{vertical-align: top;}
+.cl-valign-bottom{vertical-align: bottom;}
+.cl-valign-center{vertical-align: middle;}
+
+/*******abbreviations/addreses/bloackquote   *********/
+.cl-abbr{
+    font-weight:bold;
+    display: inline;
+}
+.cl-address{
+    display:block;
+    font-style: italic;
+    font-size: 95%;    
+}
+.cl-blockquote{
+    display: block;
+    margin: 1em;
+    font-size: 105%; 
 }
 
+/*******    text transformations   *********/
+.cl-txt-upper{text-transform: uppercase;}
+.cl-txt-lower{text-transform: lowercase;}
+.cl-txt-capital{text-transform: capitalize;}
 
-// &div {
-//     border: solid 3px black;
-//     margin-left: 2rem;
-//     width: 500px;
-//     height: 500px;
-// }
-// &div ul{
-//     display: inline;
-// }
+/*******    text shadows   *********/
+.cl-txt-shadow1{text-shadow: 2px 2px 4px $black;}
+.cl-txt-shadow2{ text-shadow:0 0 3px #ff0000, 0 0 5px #0000ff};
+
+//border styles
+.cl-bs-solid{border-style: solid;}
+.cl-bs-groove{ border-style: groove;}
+.cl-bs-dotted{ border-style: dotted;}
+.cl-bs-ridge{ border-style: ridge;}
+.cl-bs-outset{ border-style: outset;}
+.cl-bs-double{ border-style: double;}
+
+
+/*******    LISTS (ul/ol)  *********/
+.cl-inline{
+    display: inline;
+}
+.cl-inline-blk{
+    display: inline-block;
+}
+.cl-blk{
+    display: block;
+}
+#headings ul{
+    display: inline-block;
+    list-style-type: disc;
+    list-style-position: inside;
+    margin-left: 1.5em;
+}
+.cl-inline-blk{
+    display: inline-block;
+}
+.cl-blk{
+    display: block;
+}
+// list style position
+.ul-lsp-in{
+    list-style: inside;
+}
+.ul-lsp-out{
+    list-style: outside;
+}
+
+//list style type
+
+
+
+
+/*******   margin classes    *********/
+//margin on all sides
+.m5{    margin: .5em;  }
+.m10{    margin: 1em;  }
+//margin on left and right
+.mx5{   margin: 0 .5em;}
+.mx10{   margin: 0 1em;}
+//margin on top and bottom
+.my5{   margin: .5em 0;}
+.my10{   margin: 1em 0;}
+
+/*******   padding classes    *********/
+//padding on all sides
+.p5{    padding: .5em;  }
+.p10{    padding: 1em;  }
+//padding on left and right
+.px5{   padding: 0 .5em;}
+.px10{   padding: 0 1em;}
+//padding on top and bottom
+.py5{   padding: .5em 0;}
+.py10{   padding: 1em 0;}
+
+/*******   *********/

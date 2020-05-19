@@ -1,17 +1,18 @@
-$color-even-cells: lightpink;
-$color-odd-cells: lightsteelblue;
-$tbl-border:blue;
-$tbl-caption:rgb(151, 151, 209);
-$tbl-background: #fff; //rgb(223, 223, 247);
-$tbl-hdr-background: #dedede;
-$tbl-link: #008cba;
-$brk-md: 500px;
-$brk-lg: 760px;
-$brk-xl: 1000px;
-$border-radius: 4px;
+// $color-even-cells: lightpink;
+// $color-odd-cells: lightsteelblue;
+// $tbl-border:blue;
+// $tbl-caption:rgb(151, 151, 209);
+// $tbl-background: #fff; //rgb(223, 223, 247);
+// $tbl-hdr-background: #dedede;
+// $tbl-link: #008cba;
+// $brk-md: 500px;
+// $brk-lg: 760px;
+// $brk-xl: 1000px;
+// $border-radius: 4px;
+// $gray: #ccc;
 
 //BASIC TABLE STYLING
-table {
+.cl-table {
 	background-color: $tbl-background;
     border-collapse: collapse;
     width: 95%;
@@ -96,12 +97,12 @@ table {
             float:left;
             width: 100%;
             &:before {
-                    width: 100%;
+                    width: 50%;
                     display: block;
                     float: left;
                     padding: .5em .5em .5em 0;
                     clear: both;
-                    margin: -.5em 0 0 -100%;
+                    // margin: -.5em 0 0 -100%;
                     font-size: 1.125em;
                 }
             }
@@ -153,6 +154,7 @@ table {
     }
 }
 %responsive-tables-large {
+
     @include rwd-first;
     @media screen and (min-width: $brk-xl) { 
         @include rwd-second;        

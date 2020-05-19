@@ -1,4 +1,4 @@
-
+// all classes for buttons
 
 button, .cl-btn{
     background-color: $button-background;
@@ -30,7 +30,7 @@ button, .cl-btn{
     cursor: pointer;
  }
 
- types
+ //types
  .cl-btn{
      font-size: 100%;
      padding: 5px 10px;
@@ -45,11 +45,11 @@ button, .cl-btn{
 //  .cl-btn-reset{
 
 //  }
- .cl-btn-link{
+//  .cl-btn-link{
      //use as link to a different section on the page
 
 
- }
+//  }
  .cl-btn-increment{    //with + sign 
 }
  .cl-btn-decrement{    //with - sign 
@@ -93,51 +93,3 @@ button, .cl-btn{
 .cl-btn-flip{}
 
 .cl-btn-group{}
-
-
-
-
-//global style
-/*******headings   *********/
-/*******    bodycopy/paragraphs   *********/
-/*******inline text elements   *********/
-.cl-bold{font-weight: bold;}
-.cl-italic{font-style: italic}
-.cl-cite{}
-.cl-code{}
-.cl-variables{}
-/*******    alignments   *********/
-.cl-align-left{text-align: left;}
-.cl-align-right{text-align: right;}
-.cl-align-center{text-align: center;}
-.cl-valign-top{vertical-align: top;}
-.cl-valign-bottom{vertical-align: bottom;}
-.cl-valign-center{vertical-align: middle;}
-/*******abbreviations/addreses/bloackquote   *********/
-.cl-abbr{}
-.cl-address{}
-.cl-blockquote{}
-/*******    lists   *********/
-
-/*******    text transformationss   *********/
-.cl-txt-upper{text-transform: uppercase;}
-.cl-txt-lower{text-transform: lowercase;}
-.cl-txt-capital{text-transform: capitalize;}
-/*******    text shadows   *********/
-.cl-txt-shadow-1c{text-shadow: 2px 2px 4px $black;}
-.cl-txt-shadow-2c{ text-shadow:0 0 3px #ff0000, 0 0 5px #0000ff};
-.cl-txt-border{
-    text-shadow: -1px 0 $black, 0 1px $black, 1px 0 $black, 0 -1px $black;
-}
-/*******       *********/
-
-/*******   *********/
-
-//border styles
-.cl-bs-solid{border-style: solid}
-.cl-bs-groove{ border-style: groove;}
-.cl-bs-dotted{ border-style: dotted;}
-.cl-bs-ridge{ border-style: ridge;}
-.cl-bs-outset{ border-style: outset;}
-.cl-bs-double{ border-style:double;}
-

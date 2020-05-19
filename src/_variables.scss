@@ -7,7 +7,7 @@ $gray: #ccc;
 
 
 $background-html: #fff;
-// $background-body: $white;
+$background-body: $white;
 $background-body: #ccc;
 
 
@@ -28,12 +28,20 @@ $border-radius: 4px;
 //maybe set these to inherit from browser
 $font-family: inherit;
 $font-family-body: inherit;
-$text-color-default: green;
+$text-color-default: $black;
 
 $button-background: #dedede;
 $button-border: #ccc;
 
-$breakpoint-xs: 400px;
-$breakpoint-sm: 600px;
+$breakpoint-xs: 360px;
+$breakpoint-sm: 640px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 960px;
+
+//setting colors for theme a
+$bg-html-th1: #ddd;
+$bg-html-th2: lightblue;
+
+$bg-body-th1: lightblue;
+$bg-body-th2: #ccc;
+
