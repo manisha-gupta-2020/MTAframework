@@ -1,1 +1,95 @@
- 
+// all classes for buttons
+
+button, .cl-btn{
+    background-color: $button-background;
+    border: solid 1px $button-border;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 100%;
+    padding: 5px 15px;
+    border-radius: 1px;
+}
+ input[type=button], .cl-btn-input{    
+    padding: 5px;
+    border: solid 1px $button-border;
+    background: $button-background;
+    cursor: pointer;
+}
+ input[type=submit], .cl-btn-submit{
+    padding: 5px;
+    border: solid 1px $button-border;
+    background: $button-background;
+    cursor: pointer;
+ }
+ input[type=reset], .cl-btn-reset{
+    padding: 5px;
+    border: solid 1px $button-border;
+    background: $button-background;
+    cursor: pointer;
+ }
+
+ //types
+ .cl-btn{
+     font-size: 100%;
+     padding: 5px 10px;
+     border-radius: 1px;
+ }
+//  .cl-btn-input{
+
+//  }
+//  .cl-btn-submit{
+
+//  }
+//  .cl-btn-reset{
+
+//  }
+//  .cl-btn-link{
+     //use as link to a different section on the page
+
+
+//  }
+ .cl-btn-increment{    //with + sign 
+}
+ .cl-btn-decrement{    //with - sign 
+}
+ .cl-btn-more{ //for more details has >> sign on it
+}
+
+
+ //sizes
+ .cl-btn-xsm{ font-size: 70%; }
+.cl-btn-sm{ font-size: 85%; }
+.cl-btn-lg{font-size: 110%;}
+.cl-btn-xlg{font-size: 205%;}
+
+//states
+.cl-btn-hover{}
+.cl-btn-t-hover{//with transition on hover
+}
+.cl-btn-active{border: solid 1px #ccc;}
+.cl-btn-active{border: solid 1px #ccc;}
+
+.cl-btn-disabled{
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+//colors
+.cl-btn-themea{}
+.cl-btn-themeb{}
+.cl-btn-themec{}
+
+//styles
+.cl-btn-sharp{border-radius: 0;}
+.cl-btn-soft{border-radius: 5px;}
+.cl-btn-oval{border-radius: 25rem;}
+.cl-btn-round{border-radius: 50%;}
+.cl-btn-shadow{box-shadow: 2px -2px 1px $gray;}
+
+.cl-btn-toggle{}
+.cl-btn-flip{}
+
+.cl-btn-group{}

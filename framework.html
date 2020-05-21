@@ -11,6 +11,9 @@
     <!-- link for font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
+    <!-- links for all fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&family=Caveat+Brush&family=Cookie&family=Dancing+Script:wght@400;700&family=Lato:wght@300;400;700&family=Lobster&family=Open+Sans:wght@300;400;700&family=Poppins:wght@300;400;500&family=Satisfy&display=swap" rel="stylesheet"> 
+
     <!-- link to bootstrap glyphicon cdn -->
     <!-- <link rel="stylesheet" href="<link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">"> -->
 
@@ -24,10 +27,25 @@
 
     <title>Framework examples</title>
 </head>
- <body class="cl-a-body px-10" >
 
-    <h1>Framework testing</h1>
+ <body class="a-body px-10" >
+    <header class="a-header">
+        <h1 class="a-header">MTA Framework </h1>
+    </header>
+    
+    <nav class="a-nav py-10">
+        <ul class="cl-inline-blk-list my-10">
+            <li class="cl-txt-upper px-5 py-10">home</li>
+            <li class="cl-txt-upper">documentation</li>
+            <li class="cl-txt-upper">examples</li>
+            <li class="cl-txt-upper">Icons</li>
+            <li class="cl-txt-upper">about</li>
+            <li class="cl-txt-upper">Contact</li>
+        </ul>
+    </nav>
+
     <div >
+
         <ul >
             <li class="cl-inline-blk">item1</li>
             <li class="cl-inline-blk">item2</li>
@@ -36,128 +54,67 @@
             <li class="cl-inline-blk">item5</li>
         </ul>
     </div>
- 
-    <section id="id-responsive-table-sm">
-      <h2>Example for using out responsive table classes on a small table.</h2>
-      <p>Small tables with a size of upto 3 columns beome responsive by collapsing to stacked rows on small screen. At  screen breakpoint of 500px they change to the normal table.</p>  
-      <h5>Use classes cl-table (for base styling) and cl-rwd-table(for responsive behavior)</h5>   
-      <table class="cl-table cl-res-table-sm">
-        <caption>Small table</caption>
-        <thead>
-          <tr>
-              <th>Heading Col 1</th>
-              <th>Heading Col 2</th>
-              <th>Heading Col 3</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-              <td>Data Col 1a</td>
-              <td>Data Col 2a</td>
-              <td>Data Col 3a</td>
-          </tr>
-          <tr>
-              <td>Data Col 1b</td>
-              <td>Data Col 2b</td>
-              <td>Data Col 3b</td>
-          </tr>
-          <tr>
-              <td>Data Col 1c</td>
-              <td>Data Col 2c</td>
-              <td>Data Col 3c</td>
-          </tr>
-          <tr>
-              <td>Data Col 1d</td>
-              <td>Data Col 2d</td>
-              <td>Data Col 3d</td>
-          </tr>
-          <tr>
-              <td>Data Col 1e</td>
-              <td>Data Col 2e</td>
-              <td>Data Col 3e</td>
-          </tr>
-          <tr>
-              <td>Data Col 1f</td>
-              <td>Data Col 2f</td>
-              <td>Data Col 3f</td>
-          </tr>
-        </tbody>
-      </table>
-      </section>
- 
-      <section id="id-responsive-table-md">
-        <h2>Example for using out responsive table classes on a medium size table.</h2>
-        <p>Medium tables with a size of upto 5 columns become responsive by collapsing to stacked rows on small screen. At screen breakpoint of 768px they change to the normal table.</p>  
-        <h5>Use classes cl-table (for base styling) and cl-rwd-table-md (for responsive behavior)</h5> 
-    <table class="cl-table cl-res-table-md">
-        <caption>Medium table example</caption>
-        <thead>
-        <tr>
-            <th>Heading Col 1</th>
-            <th>Heading Col 2</th>
-            <th>Heading Col 3</th>
-            <th>Heading Col 4</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>Data Col 1a</td>
-            <td>Data Col 2a</td>
-            <td>Data Col 3a</td>          
-            <td>Data Col 4a</td>
-        </tr>
-        <tr>
-            <td>Data Col 1b</td>
-            <td>Data Col 2b</td>
-            <td>Data Col 3b</td>
-            <td>Data Col 4b</td>
-        </tr>
-        <tr>
-            <td>Data Col 1c</td>
-            <td>Data Col 2c</td>
-            <td>Data Col 3c</td>
-            <td>Data Col 4c</td>
-        </tr>
-        <tr>
-            <td>Data Col 1d</td>
-            <td>Data Col 2d</td>
-            <td>Data Col 3d</td>
-            <td>Data Col 4d</td>
-        </tr>
-        <tr>
-            <td>Data Col 1e</td>
-            <td>Data Col 2e</td>
-            <td>Data Col 3e</td>
-            <td>Data Col 4e</td>
-        </tr>
-        <tr>
-            <td>Data Col 1f</td>
-            <td>Data Col 2f</td>
-            <td>Data Col 3f</td>
-            <td>Data Col 4f Data Col 4f Data Col 4f Data Col 4f</td>
-        </tr>
-        </tbody>
-    </table>   
-    </section>
-
-    <section id="id-responsive-table-lg">
-      <h2>Example for using out responsive table classes on a large size table.</h2>
-      <p>Tables are considered large if they have more than 6 columns with medium size data. </p>
-      <p>Tables becomes responsive by adding scoll bars to view the content. At screen breakpoint of 960px they change to the normal table.</p>  
-      <h5>Use classes cl-table (for base styling) and cl-rwd-table-large (for responsive behavior)</h5> 
-
-        <table class="cl-table cl-res-table-lg">
-            <caption>Large table</caption>
+    <section id="tables">
+        <section id="id-responsive-table-sm">
+        <h2>Example for using out responsive table classes on a small table.</h2>
+        <p>Small tables with a size of upto 3 columns beome responsive by collapsing to stacked rows on small screen. At  screen breakpoint of 500px they change to the normal table.</p>  
+        <h5>Use classes cl-table (for base styling) and cl-rwd-table(for responsive behavior)</h5>   
+        <table class="cl-table cl-res-table-sm">
+            <caption>Small table</caption>
+            <thead>
+            <tr>
+                <th>Heading Col 1</th>
+                <th>Heading Col 2</th>
+                <th>Heading Col 3</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Data Col 1a</td>
+                <td>Data Col 2a</td>
+                <td>Data Col 3a</td>
+            </tr>
+            <tr>
+                <td>Data Col 1b</td>
+                <td>Data Col 2b</td>
+                <td>Data Col 3b</td>
+            </tr>
+            <tr>
+                <td>Data Col 1c</td>
+                <td>Data Col 2c</td>
+                <td>Data Col 3c</td>
+            </tr>
+            <tr>
+                <td>Data Col 1d</td>
+                <td>Data Col 2d</td>
+                <td>Data Col 3d</td>
+            </tr>
+            <tr>
+                <td>Data Col 1e</td>
+                <td>Data Col 2e</td>
+                <td>Data Col 3e</td>
+            </tr>
+            <tr>
+                <td>Data Col 1f</td>
+                <td>Data Col 2f</td>
+                <td>Data Col 3f</td>
+            </tr>
+            </tbody>
+        </table>
+        </section>
+    
+        <section id="id-responsive-table-md">
+            <h2>Example for using out responsive table classes on a medium size table.</h2>
+            <p>Medium tables with a size of upto 5 columns become responsive by collapsing to stacked rows on small screen. At screen breakpoint of 768px they change to the normal table.</p>  
+            <h5>Use classes cl-table (for base styling) and cl-rwd-table-md (for responsive behavior)</h5> 
+        <table class="cl-table cl-res-table-md">
+            <caption>Medium table example</caption>
             <thead>
             <tr>
                 <th>Heading Col 1</th>
                 <th>Heading Col 2</th>
                 <th>Heading Col 3</th>
                 <th>Heading Col 4</th>
-                <th>Heading Col 5</th>
-                <th>Heading Col 6</th>
-                <th>Heading Col 7</th>
-                <th>Heading Col 8</th>
             </tr>
             </thead>
             <tbody>
@@ -166,66 +123,127 @@
                 <td>Data Col 2a</td>
                 <td>Data Col 3a</td>          
                 <td>Data Col 4a</td>
-                <td>Data Col 5a</td>
-                <td>Data Col 6a</td>
-                <td>Data Col 7a</td>          
-                <td>Data Col 8a</td>
-
             </tr>
             <tr>
                 <td>Data Col 1b</td>
                 <td>Data Col 2b</td>
                 <td>Data Col 3b</td>
                 <td>Data Col 4b</td>
-                <td>Data Col 5b</td>
-                <td>Data Col 6b</td>
-                <td>Data Col 7b</td>          
-                <td>Data Col 8b</td>
             </tr>
             <tr>
                 <td>Data Col 1c</td>
                 <td>Data Col 2c</td>
                 <td>Data Col 3c</td>
                 <td>Data Col 4c</td>
-                <td>Data Col 5c</td>
-                <td>Data Col 6c</td>
-                <td>Data Col 7c</td>          
-                <td>Data Col 8c</td>
             </tr>
             <tr>
                 <td>Data Col 1d</td>
                 <td>Data Col 2d</td>
                 <td>Data Col 3d</td>
                 <td>Data Col 4d</td>
-                <td>Data Col 5d</td>
-                <td>Data Col 6d</td>
-                <td>Data Col 7d</td>          
-                <td>Data Col 8d</td>
             </tr>
             <tr>
                 <td>Data Col 1e</td>
                 <td>Data Col 2e</td>
                 <td>Data Col 3e</td>
                 <td>Data Col 4e</td>
-                <td>Data Col 5e</td>
-                <td>Data Col 6e Lorem ipsum dolor sit amet.</td>
-                <td>Data Col 7e Lorem, ipsum dolor.</td>          
-                <td>Data Col 8e</td>
             </tr>
             <tr>
                 <td>Data Col 1f</td>
                 <td>Data Col 2f</td>
                 <td>Data Col 3f</td>
                 <td>Data Col 4f Data Col 4f Data Col 4f Data Col 4f</td>
-                <td>Data Col 5f Lorem ipsum dolor sit amet.</td>
-                <td>Data Col 6f Lorem ipsum dolor sit amet consectetur.</td>
-                <td>Data Col 7f</td>          
-                <td>Data Col 8f</td>
             </tr>
             </tbody>
-        </table> 
-    </section>
+        </table>   
+        </section>
 
+        <section id="id-responsive-table-lg">
+        <h2>Example for using out responsive table classes on a large size table.</h2>
+        <p>Tables are considered large if they have more than 6 columns with medium size data. </p>
+        <p>Tables becomes responsive by adding scoll bars to view the content. At screen breakpoint of 960px they change to the normal table.</p>  
+        <h5>Use classes cl-table (for base styling) and cl-rwd-table-large (for responsive behavior)</h5> 
+
+            <table class="cl-table cl-res-table-lg">
+                <caption>Large table</caption>
+                <thead>
+                <tr>
+                    <th>Heading Col 1</th>
+                    <th>Heading Col 2</th>
+                    <th>Heading Col 3</th>
+                    <th>Heading Col 4</th>
+                    <th>Heading Col 5</th>
+                    <th>Heading Col 6</th>
+                    <th>Heading Col 7</th>
+                    <th>Heading Col 8</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Data Col 1a</td>
+                    <td>Data Col 2a</td>
+                    <td>Data Col 3a</td>          
+                    <td>Data Col 4a</td>
+                    <td>Data Col 5a</td>
+                    <td>Data Col 6a</td>
+                    <td>Data Col 7a</td>          
+                    <td>Data Col 8a</td>
+
+                </tr>
+                <tr>
+                    <td>Data Col 1b</td>
+                    <td>Data Col 2b</td>
+                    <td>Data Col 3b</td>
+                    <td>Data Col 4b</td>
+                    <td>Data Col 5b</td>
+                    <td>Data Col 6b</td>
+                    <td>Data Col 7b</td>          
+                    <td>Data Col 8b</td>
+                </tr>
+                <tr>
+                    <td>Data Col 1c</td>
+                    <td>Data Col 2c</td>
+                    <td>Data Col 3c</td>
+                    <td>Data Col 4c</td>
+                    <td>Data Col 5c</td>
+                    <td>Data Col 6c</td>
+                    <td>Data Col 7c</td>          
+                    <td>Data Col 8c</td>
+                </tr>
+                <tr>
+                    <td>Data Col 1d</td>
+                    <td>Data Col 2d</td>
+                    <td>Data Col 3d</td>
+                    <td>Data Col 4d</td>
+                    <td>Data Col 5d</td>
+                    <td>Data Col 6d</td>
+                    <td>Data Col 7d</td>          
+                    <td>Data Col 8d</td>
+                </tr>
+                <tr>
+                    <td>Data Col 1e</td>
+                    <td>Data Col 2e</td>
+                    <td>Data Col 3e</td>
+                    <td>Data Col 4e</td>
+                    <td>Data Col 5e</td>
+                    <td>Data Col 6e Lorem ipsum dolor sit amet.</td>
+                    <td>Data Col 7e Lorem, ipsum dolor.</td>          
+                    <td>Data Col 8e</td>
+                </tr>
+                <tr>
+                    <td>Data Col 1f</td>
+                    <td>Data Col 2f</td>
+                    <td>Data Col 3f</td>
+                    <td>Data Col 4f Data Col 4f Data Col 4f Data Col 4f</td>
+                    <td>Data Col 5f Lorem ipsum dolor sit amet.</td>
+                    <td>Data Col 6f Lorem ipsum dolor sit amet consectetur.</td>
+                    <td>Data Col 7f</td>          
+                    <td>Data Col 8f</td>
+                </tr>
+                </tbody>
+            </table> 
+        </section>
+    </section>
   
   <section id="buttons">
       <div>

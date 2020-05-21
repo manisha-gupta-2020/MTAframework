@@ -7,22 +7,42 @@ $gray: #ccc;
 
 
 $background-html: #fff;
-// $background-body: $white;
+$background-body: $white;
 $background-body: #ccc;
 
 
-//table
-// $color-even-cells: lightpink;
-// $color-odd-cells: lightsteelblue;
-// $table-border: red;
-// $table-caption:lavender;
+//color variables for table
+
+$color-even-cells: lightpink;
+$color-odd-cells: lightsteelblue;
+$tbl-border:blue;
+$tbl-caption:rgb(151, 151, 209);
+$tbl-background: #fff; //rgb(223, 223, 247);
+$tbl-hdr-background: #dedede;
+$tbl-link: #008cba;
+$brk-md: 500px;
+$brk-lg: 760px;
+$brk-xl: 1000px;
+$border-radius: 4px;
 
 //maybe set these to inherit from browser
 $font-family: inherit;
 $font-family-body: inherit;
-$text-color-default: green;
+$text-color-default: $black;
 
-$breakpoint-xs: 400px;
-$breakpoint-sm: 600px;
+$button-background: #dedede;
+$button-border: #ccc;
+
+$breakpoint-xs: 360px;
+$breakpoint-xsm: 500px; //used only for tables
+$breakpoint-sm: 640px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 960px;
+
+//setting colors for theme a
+$bg-html-th1: #ddd;
+$bg-html-th2: lightblue;
+
+$bg-body-th1: lightblue;
+$bg-body-th2: #ccc;
+

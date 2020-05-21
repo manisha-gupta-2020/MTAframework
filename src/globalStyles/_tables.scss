@@ -1,312 +1,180 @@
-/* create 3 classes for tables
-1) very small table.does not need to be responsive. use class .cl-table
-2)small table with small data.  (use classes .cl-table .cl-rwd-table)
-2) medium size table. make responsive by collapsing rows (use classes .cl-table .cl-rwd-table-md)
-3) large table - make responsive by adding scroll bars (use classes .cl-table .cl-rwd-table-large)
-*/
+$cl-g-evenrow: lightpink;
+$cl-g-oddrow: lightsteelblue;
+$cl-b-evenrow: lightpink;
+$cl-b-oddrow: lightsteelblue;
+$cl-c-evenrow: lightpink;
+$cl-c-oddrow: lightsteelblue;
 
-/* 
-Issues.
-Large table taking html background as background color.
-not able to attach scroll bar on width less than 960px
-hover not working on even and odd rows
+$tbl-border:blue;
+$tbl-caption:rgb(151, 151, 209);
+$tbl-background: #fff; //rgb(223, 223, 247);
+$tbl-hdr-background: #dedede;
+$tbl-link: #008cba;
+$brk-md: 500px;
+$brk-lg: 760px;
+$brk-xl: 1000px;
+$border-radius: 4px;
+$gray: #ccc;
 
-*/
-
-$color-even-cells: lightpink;
-$color-odd-cells: lightsteelblue;
-$table-border: red;
-$table-caption:rgb(151, 151, 209);
-$table-background: rgb(223, 223, 247);
-$table-link: #008cba;
-
-
-// $primary-color: #008cba;
-// $gray-color: #ddd;
-$small-up: 500px;
-$medium-up: 640px;
-$large-up: 960px;
-$radius: 4px;
+//BASIC TABLE STYLING
+//row highlighting classes
+.cl-highlight-light{background-color: #fafafa;}
+.cl-highlight-medium{background-color: #bdbbbb;}
+.cl-highlight-dark{background-color: #5b6063;}
+.cl-highlight-green{background-color: #68ed7e;}
+.cl-highlight-yellow{ background-color: #f2fa19;}
+.cl-highlight-alert{ background-color: #f78b1e; }
 
 
-@mixin heading-font-regular {
-	font-family: 'Helvetica', 'Helvetica Neue', 'Arial', sans-serif;;
+
+//odd-even-colors for the 3 themes
+.cl-g-even{background-color: transparentize($cl-g-evenrow, .6);}
+.cl-g-odd{background-color: transparentize($cl-g-oddrow, .6);}
+
+.cl-g-even-hover:hover{background-color: transparentize($cl-g-evenrow, .6);}
+.cl-g-odd-hover:hover{background-color: transparentize($cl-g-oddrow, .6);}
+
+.cl-b-even{background-color: transparentize($cl-b-evenrow, .6);}
+.cl-b-odd{background-color: transparentize($cl-b-oddrow, .6);}
+
+.cl-b-even-hover:hover{background-color: transparentize($cl-b-evenrow, .6);}
+.cl-b-odd-hover:hover{background-color: transparentize($cl-b-oddrow, .6);}
+
+.cl-c-even{background-color: transparentize($cl-c-evenrow, .6);}
+.cl-c-odd{background-color: transparentize($cl-c-oddrow, .6);}
+
+.cl-c-even-hover:hover{background-color: transparentize($cl-c-evenrow, .6);}
+.cl-c-odd-hover:hover{background-color: transparentize($cl-c-oddrow, .6);}
+.cl-tbl-border{
+    border: solid .5px #ccc;
 }
 
-
-//SUPER BASIC PAGE STYLING
-
-///BASIC TABLE STYLING
+// table styling for full styling with theme basic - a
 .cl-table {
-  border-collapse: collapse;
-    background-color: $table-background;
-    font-size: 1.5rem;
-    text-align: left;
+	background-color: $tbl-background;
+    border-collapse: collapse;
     width: 95%;
-    margin: 0 auto;
-    caption{
-      font-size: 2.5rem;
-      text-align: left;
-      padding-bottom: 5px;
-      color: $table-caption;
+	float: left;
+	margin: 0 2% 2em;
+	caption{
+		text-align: left;
+		padding-bottom: 5px;
+		color: $tbl-caption;
+		display: table-header-group; //to ensure captions displayed above thead and did not wrap
+	  }
+    thead {
+		border-bottom: .2rem solid $tbl-border;
+		background-color: $tbl-hdr-background;
+        th {
+            padding: 0.35em 0 .35em;
+            font-weight: 400;
+            text-align: left;
+            font-size: 1.25em;
+            vertical-align: -webkit-baseline-middle;
+            vertical-align: middle;
+        }        
     }
-	thead {	
-    tr{
-      background-color: $table-link;
-      &:hover{
-          background-color: complement($table-link); //use of color modifier
-      }
-      th {
-        padding: 0.35em 0 .35em;
-        font-weight: bold;
-        text-align: center;
-        @include heading-font-regular;
-        border-bottom: 1px solid $table-border;
-        // font-size: 1.25em;
-      }
-		}		
-	}
 
-	tbody {
-		border-bottom: 3px solid $table-border;
-		tr {
-      // border-bottom: 2px solid #ddd;
-      &:nth-child(even){
-        background-color: $color-even-cells;
-        &:hover{
-            background-color: opacify($color-even-cells, .3);
+    tbody {
+        tr {
+			&:nth-child(odd){
+                background-color: transparentize($cl-g-oddrow, .7);
+                    &:hover{
+                        background-color: opacify($cl-g-oddrow, .3);
+                    }
+                }             
+			&:nth-child(even){
+                background-color: transparentize($cl-g-evenrow, .7);
+                    &:hover{
+                        background-color: opacify($cl-g-evenrow, .3);
+                    }
+                }  
+            td {
+                padding: .75em 0;
+                a {
+                    color: $tbl-link;
+                    text-decoration: none;
+                    display: inline-block;
+                    margin: 0 .5em 0 0;
+                    &:hover, &:active, &:focus {
+                        color: darken($tbl-link, 10%);
+                        border: none;
+                    }
+                }
+            }
         }
-      }
-      &:nth-child(odd){
-        background-color: $color-odd-cells;
-        &:hover{
-            background-color: opacify($color-odd-cells, .3); 
-        }
-      }       
-			td {
-				padding: .75em 0;
-				a {
-					color: $table-link;
-					text-decoration: none;
-					display: inline-block;
-					margin: 0 .5em 0 0;
-					&:hover, &:active, &:focus {
-						color: darken($table-link, 10%);
-						border: none;
-					}
-				}
-			}
-		}
-	}
+    }
 
-	tfoot {
-		td {
-			padding: 0.35em 0 .35em;
-			text-align: left;
-			@include heading-font-regular;
-			font-size: 1.25em;
-		}
-	}
+    tfoot {
+        td {
+            padding: 0.35em 0 .35em;
+            text-align: left;
+            font-size: 1.25em;
+        }
+    }
 }
 
 ///RWD MIXIN BELOW
-@mixin rwd-table-collapse{
-	display: block;
+@mixin rwd-first {
+    display: block;
     tbody {
-    border: none;
-     }
-		tbody, th, td, tr, tfoot {
-			display: block; 
-		}
-		thead {
-			display: none;
-		}
-		tr {
-      float: left;
-      width: 100%;
-      margin: 0 0 1em;
-       border: 1px solid $gray;
-			box-shadow: 0px 2px 5px 0px $gray;
-			border-radius: $radius;
-			border-top: 5px solid $table-border;
-
-			td {
-				padding: .5em .5em .5em 50%;
-				float:left;
-       		width: 100%;
-				&:before {
-					width: 100%;
-					display: block;
-					float: left;
-					padding: .5em .5em .5em 0;
-					clear: both;
-					margin: -.5em 0 0 -100%;
-					@include heading-font-regular;
-					font-size: 1.125em;
-
-				}
-			}
-		}
-
-		// tr:nth-of-type(even) {
-		// 	//background: $gray-color;
-		// 	td {				
-		// 		&:before {					
-		// 		}
-		// 	}
-		// }
+        border: none;
+    }
+    tbody, th, td, tr, tfoot {  display: block; }
+    thead { display: none;  }
+    tr {
+        float: left;
+        width: 100%;
+        margin: 0 0 1em;
+        border: 1px solid $gray;
+        box-shadow: 0px 2px 5px 0px $gray;
+        border-radius: $border-radius;
+        border-top: 5px solid $tbl-border;
+        td {
+            padding: .5em .5em .5em 50%; //left padding 50% to allow space for headings
+            float:left;
+            width: 100%;
+            &:before {
+                    width: 50%;
+                    display: block;
+                    float: left;
+                    padding: .5em .5em .5em 0;
+                    clear: both;
+                    // margin: -.5em 0 0 -100%;
+                    font-size: 1.125em;
+                }
+            }
+        }
 }
 
-@mixin rwd-second {
-	display: table;
-	border: none;
-  tbody {
-    border-bottom: 3px solid $table-border;
-  }
-	th, td {
-		display: table-cell; 
-	}
-	tr {
-		display: table-row;
-		border: none;
-		border-bottom: 1px solid #eee;
-    float: none;
-    margin: 0;
-		box-shadow: none;
+.cl-res-table-sm{
+    @media screen and(max-width: $breakpoint-sm){
+        @include rwd-first;
+        td:nth-of-type(1):before {content: "Heading Col1"; }
+        td:nth-of-type(2):before {content: "Heading Col2"; }
+        td:nth-of-type(3):before {content: "Heading Col3"; }
 
-		td {
-			padding: .75em 0 0.75em .25em;
-      float: none;
-      width: auto;
-
-			&:before {
-				padding: 0 !important;
-			}
-		}
-	}
-	thead {
-		display: table-header-group;
-	}
-	tbody,tfoot {
-		display: table-row-group;
-	}
-	tr:nth-of-type(even) {
-		background:none;
-		td {			
-			&:before {}
-		}
-	}
+    }
 }
-
-
-%responsive-tables {
-  @include rwd-table-collapse;
-	@media screen and (min-width: $small-up) {  //640px
-		@include rwd-second;
-		
-	}
+.cl-res-table-md{
+    @media screen and(max-width: $breakpoint-md){
+        @include rwd-first;
+        td:nth-of-type(1):before {content: "Heading Col1"; }
+        td:nth-of-type(2):before {content: "Heading Col2"; }
+        td:nth-of-type(3):before {content: "Heading Col3"; }
+        td:nth-of-type(4):before {content: "Heading Col4"; }
+    }
 }
-%responsive-tables-md {
-	@include rwd-table-collapse;
-
-	@media screen and (min-width: $medium-up) { //768pc
-		@include rwd-second;
-		
-	}
-}
-
-@mixin rwd-table-scroll{
-  display: block;
-  overflow-x:auto;
-  table-layout: fixed;
-    // display: block;
-    // overflow-y: auto;
-  // }
-}
-%responsive-tables-large {
-  // @include rwd-table-collapse;
-  @include rwd-table-scroll;
-	@media screen and (min-width: $large-up) { //960px
-    // @include rwd-second;
-
-    .cl-rwd-table-lrg-wrap{
-      overflow-x: inherit;
-      // overflow-y: hidden;
-    }		
-	}
-}
-/*
-%responsive-tables-large {
-  @include rwd-table-collapse;
-	@media screen and (min-width: $large-up) { //960px
-    @include rwd-second;
-	}
-}
-*/
-@mixin responsive-tables($headings...) {
-	$list: $headings;
-
-	@each $list-headings in $list {
-		$i: index($list, $list-headings);
-		tbody tr td:nth-of-type(#{$i}):before { 
-			content: $list-headings; 
-		}
-		
-		@media screen and (min-width: $small-up) { 
-			tbody tr td:nth-of-type(#{$i}):before { 
-				content: ''; 
-			}
-		}
-
-	}
-}
-@mixin responsive-tables-md($headings...) {
-	$list: $headings;
-
-	@each $list-headings in $list {
-		$i: index($list, $list-headings);
-		tbody tr td:nth-of-type(#{$i}):before { 
-			content: $list-headings; 
-		}
-		
-		@media screen and (min-width: $medium-up) { 
-			tbody tr td:nth-of-type(#{$i}):before { 
-				content: ''; 
-			}
-		}
-
-	}
-}
-
-
-@mixin responsive-tables-large($headings...) {
-	$list: $headings;
-
-	@each $list-headings in $list {
-		$i: index($list, $list-headings);
-		tbody tr td:nth-of-type(#{$i}):before { 
-			content: $list-headings; 
-		}
-		
-		@media screen and (min-width: $large-up) { 
-			tbody tr td:nth-of-type(#{$i}):before { 
-				content: ''; 
-			}
-		}
-
-	}
-}
-
-.cl-rwd-table{
-	@extend %responsive-tables;
-	@include responsive-tables('Heading Col 1', 'Heading Col 2', 'Heading Col 3');
-}
-.cl-rwd-table-md {
-	@extend %responsive-tables-md;
-	@include responsive-tables-md('Heading Col 1', 'Heading Col 2', 'Heading Col 3', 'Heading Col 4');
-}
-
-.cl-rwd-table-large {
-	@extend %responsive-tables-large;
-	// @include responsive-tables-large('Heading Col 1', 'Heading Col 2', 'Heading Col 3','Heading Col 4','Heading Col 5','Heading Col 6','Heading Col 7','Heading Col 8');
+.cl-res-table-lg{
+    @media screen and(max-width: $breakpoint-lg){
+        @include rwd-first;
+        td:nth-of-type(1):before {content: "Heading Col1"; }
+        td:nth-of-type(2):before {content: "Heading Col2"; }
+        td:nth-of-type(3):before {content: "Heading Col3"; }
+        td:nth-of-type(4):before {content: "Heading Col4"; }
+        td:nth-of-type(5):before {content: "Heading Col5"; }
+        td:nth-of-type(6):before {content: "Heading Col6"; }
+        td:nth-of-type(7):before {content: "Heading Col7"; }
+        td:nth-of-type(8):before {content: "Heading Col8"; }
+    }
 }

@@ -20,24 +20,26 @@
 **************************************************************************************/    
 
 @import "variables";
-// @import "color-themes";
 
-
-
-/************************************************************************************
-	2. 		 CSS RESET, MIXINS
-*************************************************************************************/
+/**************************************************************************
+	2. 		 CSS RESET, MIXINS, UTILITIES(IMAGES, FLOATS)
+***************************************************************************/
 @import "reset";
 @import "mixins";
+@import "utilities";
 
 /************************************************************************************
-	3. 		 GLOBAL STYLES (TYPOGRAPHY, GRIDS, TABLES,FORMS, BUTTONS, IMAGES, FLOATS)
+	3. 		 GLOBAL STYLES (TYPOGRAPHY, GRIDS, TABLES,FORMS, BUTTONS,THEMES )
 *************************************************************************************/
+//importing all fonts provided by framework
+// @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&family=Caveat+Brush&family=Cookie&family=Dancing+Script:wght@400;700&family=Lato:wght@300;400;700&family=Lobster&family=Open+Sans:wght@300;400;700&family=Poppins:wght@300;400;500&family=Satisfy&display=swap');
 
 @import "globalStyles/typography";
-@import "globalStyles/grid";
+// @import "globalStyles/grid";
 @import "globalStyles/tables";
 @import "globalStyles/forms";
 @import "globalStyles/buttons";
-@import "global";
+@import "global-theme-a";
+// @import "global-theme-b";
+// @import "global-theme-c";
 

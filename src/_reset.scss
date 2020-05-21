@@ -1,3 +1,7 @@
+/*reference https://perishablepress.com/a-killer-collection-of-global-css-reset-styles/
+
+*/
+
 header, main, nav, article, section, aside, details, figure, figcaption,  footer, video, audio{
     display: block;
 }
@@ -6,7 +10,6 @@ header, main, nav, article, section, aside, details, figure, figcaption,  footer
     margin: 0;
     border: none;
     outline: none;
-    margin: 0 auto;  
     font-family: inherit;
     color: $text-color-default;
     font-style: inherit;
@@ -19,31 +22,31 @@ header, main, nav, article, section, aside, details, figure, figcaption,  footer
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
-
-html{   background-color: $background-html; }
-
+  html {
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
 body{
-    line-height: 1.5;
-    // max-width: 1140px;
-    // min-width: 330px; 
+    line-height: 1.15;
     margin: 0 auto;   
     font-family: inherit;
-    // background-color: $background-body;
-    // background-color: #888;
     height: 100%;
-    color: magenta;
-    // color: $text-color-default;
-        /* advanced checkbox hack rules */
-    // -webkit-animation: bugfix 1s;
-    // animation: bugfix 1s;
-    /*- end rules */
+    color: #000;
 }
 
 ol, ul, li{ list-style-type: none;   }
 
-h1, h2, h3, h4, h5, h6, pre, code{  
+h1, h2, h3, h4, h5, h6{  
     font-weight: normal;
     font-size: 100%;
+    margin-top: 0;
+    margin-bottom: 0.5rem;    
+}
+pre, code{  
+    font-weight: normal;
+    font-size: 100%;
+
 }
 
 /* remove possible quote marks (") from <q> & <blockquote> */
@@ -53,21 +56,19 @@ q:before, q:after {
     content: '';
     // content: none;
 }
+a, img, a img,:link img, :visited img, iframe, form, fieldset, abbr, acronym, object, applet, table { border: none; }
 
 //links
 a, ins, :link, :visited{    text-decoration: none;}
-
-//image links - remove border colors 
-img, a img, :link img, :visited img { border: none;}
 
 address,caption,cite,code,dfn,em,strong,th,td, var{
 	font-weight: normal;
 	font-style: normal;
     }
-    
+   
 caption,th,td {
     text-align: left;
-    vertical-align: center;
+    vertical-align: middle;
     }
 
 table {  
@@ -76,50 +77,11 @@ table {
 	border-spacing: 0;  
     }
 
-/* ######################## settings beyond the browser reset ######################### */
-p{ 
-    padding-top: .3em;
-    margin-top: 0;
-    // margin-bottom: 1rem;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-  }
-  
-
-
-/*reference https://perishablepress.com/a-killer-collection-of-global-css-reset-styles/
-
-*/
-
-
-/* 
-possible entries
-address, caption, cite, code, dfn, em, 
-h1, h2, h3, h4, h5, h6, strong, th, var {
-	font-weight: normal;
-	font-style: normal;
-	}
-caption, th {
-	text-align: left;
-    }
-q:before, q:after {
-	content: '';
-	}
-a, ins {
-	text-decoration: none;
-	}    
 //forms
-fieldset, img, abbr {
-	border: 0;
-    }
- ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input
- { margin:0; padding:0 }   
- :focus {
+:focus {
 	outline: 0;
-    }
-a, img, a img, iframe, form, fieldset, abbr, acronym, object, applet, table { border: none; }
-table { border-collapse: collapse; border-spacing: 0; }     
-    */
+    }    
+
+
+
+   
