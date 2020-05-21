@@ -1,0 +1,116 @@
+/*
+$color1: #372f30 ; //background to classes header nav ul li lineinfo
+$color2: whitesmoke; //.article12 bgcolor
+$color3: #d3cbcb;
+*/
+// <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet"> 
+
+/**************************************************************************************
+                THEME ONE
+ **************************************************************************************/               
+// theme1 colors  
+$white: #fff;// rgb(255, 255, 255)
+$lblue: #dfebf0; //rgb(223, 235, 240)
+$lgray: #c2c2c2; //rgb(194, 194, 194)
+$mgray: #656666; //rgb(101, 102, 102)
+$dgray: #1e1f1f; // rgb(30, 31, 31)
+$blue1: #64d1d1; //rgb(100, 209, 209)
+$blue2: #1d305c; //rgb(29, 48, 92)
+$font-family1: 'Lato', sans-serif;
+$font-family2: 'Open Sans', sans-serif;
+$font-family-sans-serif: 'Lato','Open Sans', sans-serif;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+// .cl-a-html{
+//   background-color: $lgray;
+
+// }
+.a-body{
+  font-family: $font-family1;
+  background-color: $lblue;
+  h1{color: $blue2; font-family: $font-family2;}
+  h2{color: $blue1}
+}
+.a-fonta{font-family: $font-family1;}
+
+
+
+
+.a-header{}
+.a-nav{}
+.a-h1{}
+.a-h2{}
+.a-h3{}
+.a-h4{}
+.a-h5{}
+.a-h6{}
+.form{
+  fieldset{}
+  input{}
+  // select{}
+  // type[radio]{}
+  // checkbox{}
+}
+.a-links{}
+.a-table{
+  thead{}
+  tbody{}
+  tfoot{}
+}
+.a-button{}
+.a-footer{}
+
+/*
+.a-body{
+  font-family: 
+  background-color: 
+}
+.a-font1{font-family:
+.a-font2{font-family:
+.a-font3{font-family:
+.a-font4{font-family:
+.a-font5{font-family:
+
+.a-header{
+  background-color:
+  color:
+}
+.a-nav{
+  background-color:
+  color:
+}
+.a-h1{color:            }
+.a-h2{color:            }
+.a-h3{color:            }
+.a-h4{color:            }
+.a-h5{color:            }
+.a-h6{color:            }
+.form{
+  fieldset{}
+  input{}
+   select{}
+   type[radio]{}
+   checkbox{}
+}
+.a-links{ link-color
+    :visited
+    active
+    focus
+    hover-color
+          
+}
+.a-table{
+  thead{}
+  tbody{}
+  tfoot{}
+}
+.a-tbl-border{
+.a-odd-row{}
+.a-odd-row-h{}
+.a-even-row{}
+.a-even-row-h{}
+
+
+.a-button{}
+.a-footer{}
+*/

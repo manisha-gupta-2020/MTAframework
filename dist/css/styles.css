@@ -188,7 +188,7 @@ h4      1.6em         1.7            1.9        2.0
 h5      1.5em         1.6            1.8        1.9
 h6      1.5em         1.6            1.8        1.9
 */
-@media screen and (min-width: 360px) {
+@media screen and (min-width: 500px) {
   p, .p {
     font-size: 1.4em;
   }
@@ -438,13 +438,6 @@ h5, h6, .h5, .h6 {
   display: block;
 }
 
-#headings ul {
-  display: inline-block;
-  list-style-type: disc;
-  list-style-position: inside;
-  margin-left: 1.5em;
-}
-
 .cl-inline-blk {
   display: inline-block;
 }
@@ -512,6 +505,82 @@ h5, h6, .h5, .h6 {
 }
 
 /*******   *********/
+.cl-highlight-light {
+  background-color: #fafafa;
+}
+
+.cl-highlight-medium {
+  background-color: #bdbbbb;
+}
+
+.cl-highlight-dark {
+  background-color: #5b6063;
+}
+
+.cl-highlight-green {
+  background-color: #68ed7e;
+}
+
+.cl-highlight-yellow {
+  background-color: #f2fa19;
+}
+
+.cl-highlight-alert {
+  background-color: #f78b1e;
+}
+
+.cl-a-even {
+  background-color: rgba(245, 186, 195, 0.4);
+}
+
+.cl-a-odd {
+  background-color: rgba(204, 200, 201, 0.4);
+}
+
+.cl-a-even-hover:hover {
+  background-color: rgba(245, 186, 195, 0.4);
+}
+
+.cl-a-odd-hover:hover {
+  background-color: rgba(204, 200, 201, 0.4);
+}
+
+.cl-b-even {
+  background-color: rgba(245, 186, 195, 0.4);
+}
+
+.cl-b-odd {
+  background-color: rgba(204, 200, 201, 0.4);
+}
+
+.cl-b-even-hover:hover {
+  background-color: rgba(245, 186, 195, 0.4);
+}
+
+.cl-b-odd-hover:hover {
+  background-color: rgba(204, 200, 201, 0.4);
+}
+
+.cl-c-even {
+  background-color: rgba(245, 186, 195, 0.4);
+}
+
+.cl-c-odd {
+  background-color: rgba(204, 200, 201, 0.4);
+}
+
+.cl-c-even-hover:hover {
+  background-color: rgba(245, 186, 195, 0.4);
+}
+
+.cl-c-odd-hover:hover {
+  background-color: rgba(204, 200, 201, 0.4);
+}
+
+.cl-tbl-border {
+  border: solid .5px #ccc;
+}
+
 .cl-table {
   background-color: #fff;
   border-collapse: collapse;
@@ -577,6 +646,165 @@ h5, h6, .h5, .h6 {
   padding: 0.35em 0 .35em;
   text-align: left;
   font-size: 1.25em;
+}
+
+@media screen and (max-width: 640px) {
+  .cl-res-table-sm {
+    display: block;
+  }
+  .cl-res-table-sm tbody {
+    border: none;
+  }
+  .cl-res-table-sm tbody, .cl-res-table-sm th, .cl-res-table-sm td, .cl-res-table-sm tr, .cl-res-table-sm tfoot {
+    display: block;
+  }
+  .cl-res-table-sm thead {
+    display: none;
+  }
+  .cl-res-table-sm tr {
+    float: left;
+    width: 100%;
+    margin: 0 0 1em;
+    border: 1px solid #ccc;
+    -webkit-box-shadow: 0px 2px 5px 0px #ccc;
+            box-shadow: 0px 2px 5px 0px #ccc;
+    border-radius: 4px;
+    border-top: 5px solid blue;
+  }
+  .cl-res-table-sm tr td {
+    padding: .5em .5em .5em 50%;
+    float: left;
+    width: 100%;
+  }
+  .cl-res-table-sm tr td:before {
+    width: 50%;
+    display: block;
+    float: left;
+    padding: .5em .5em .5em 0;
+    clear: both;
+    font-size: 1.125em;
+  }
+  .cl-res-table-sm td:nth-of-type(1):before {
+    content: "Heading Col1";
+  }
+  .cl-res-table-sm td:nth-of-type(2):before {
+    content: "Heading Col2";
+  }
+  .cl-res-table-sm td:nth-of-type(3):before {
+    content: "Heading Col3";
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cl-res-table-md {
+    display: block;
+  }
+  .cl-res-table-md tbody {
+    border: none;
+  }
+  .cl-res-table-md tbody, .cl-res-table-md th, .cl-res-table-md td, .cl-res-table-md tr, .cl-res-table-md tfoot {
+    display: block;
+  }
+  .cl-res-table-md thead {
+    display: none;
+  }
+  .cl-res-table-md tr {
+    float: left;
+    width: 100%;
+    margin: 0 0 1em;
+    border: 1px solid #ccc;
+    -webkit-box-shadow: 0px 2px 5px 0px #ccc;
+            box-shadow: 0px 2px 5px 0px #ccc;
+    border-radius: 4px;
+    border-top: 5px solid blue;
+  }
+  .cl-res-table-md tr td {
+    padding: .5em .5em .5em 50%;
+    float: left;
+    width: 100%;
+  }
+  .cl-res-table-md tr td:before {
+    width: 50%;
+    display: block;
+    float: left;
+    padding: .5em .5em .5em 0;
+    clear: both;
+    font-size: 1.125em;
+  }
+  .cl-res-table-md td:nth-of-type(1):before {
+    content: "Heading Col1";
+  }
+  .cl-res-table-md td:nth-of-type(2):before {
+    content: "Heading Col2";
+  }
+  .cl-res-table-md td:nth-of-type(3):before {
+    content: "Heading Col3";
+  }
+  .cl-res-table-md td:nth-of-type(4):before {
+    content: "Heading Col4";
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .cl-res-table-lg {
+    display: block;
+  }
+  .cl-res-table-lg tbody {
+    border: none;
+  }
+  .cl-res-table-lg tbody, .cl-res-table-lg th, .cl-res-table-lg td, .cl-res-table-lg tr, .cl-res-table-lg tfoot {
+    display: block;
+  }
+  .cl-res-table-lg thead {
+    display: none;
+  }
+  .cl-res-table-lg tr {
+    float: left;
+    width: 100%;
+    margin: 0 0 1em;
+    border: 1px solid #ccc;
+    -webkit-box-shadow: 0px 2px 5px 0px #ccc;
+            box-shadow: 0px 2px 5px 0px #ccc;
+    border-radius: 4px;
+    border-top: 5px solid blue;
+  }
+  .cl-res-table-lg tr td {
+    padding: .5em .5em .5em 50%;
+    float: left;
+    width: 100%;
+  }
+  .cl-res-table-lg tr td:before {
+    width: 50%;
+    display: block;
+    float: left;
+    padding: .5em .5em .5em 0;
+    clear: both;
+    font-size: 1.125em;
+  }
+  .cl-res-table-lg td:nth-of-type(1):before {
+    content: "Heading Col1";
+  }
+  .cl-res-table-lg td:nth-of-type(2):before {
+    content: "Heading Col2";
+  }
+  .cl-res-table-lg td:nth-of-type(3):before {
+    content: "Heading Col3";
+  }
+  .cl-res-table-lg td:nth-of-type(4):before {
+    content: "Heading Col4";
+  }
+  .cl-res-table-lg td:nth-of-type(5):before {
+    content: "Heading Col5";
+  }
+  .cl-res-table-lg td:nth-of-type(6):before {
+    content: "Heading Col6";
+  }
+  .cl-res-table-lg td:nth-of-type(7):before {
+    content: "Heading Col7";
+  }
+  .cl-res-table-lg td:nth-of-type(8):before {
+    content: "Heading Col8";
+  }
 }
 
 .cl-rwd-table {
@@ -963,6 +1191,13 @@ h5, h6, .h5, .h6 {
   }
 }
 
+input {
+  width: 100%;
+  height: 110%;
+  padding: .5em;
+  margin: 2%;
+}
+
 button, .cl-btn {
   background-color: #dedede;
   border: solid 1px #ccc;
@@ -1056,5 +1291,80 @@ input[type=reset], .cl-btn-reset {
 $color1: #372f30 ; //background to classes header nav ul li lineinfo
 $color2: whitesmoke; //.article12 bgcolor
 $color3: #d3cbcb;
+*/
+/**************************************************************************************
+                THEME ONE
+ **************************************************************************************/
+.a-body {
+  font-family: "Lato", sans-serif;
+  background-color: #dfebf0;
+}
+
+.a-body h1 {
+  color: #1d305c;
+  font-family: "Open Sans", sans-serif;
+}
+
+.a-body h2 {
+  color: #64d1d1;
+}
+
+.a-fonta {
+  font-family: "Lato", sans-serif;
+}
+
+/*
+.a-body{
+  font-family: 
+  background-color: 
+}
+.a-font1{font-family:
+.a-font2{font-family:
+.a-font3{font-family:
+.a-font4{font-family:
+.a-font5{font-family:
+
+.a-header{
+  background-color:
+  color:
+}
+.a-nav{
+  background-color:
+  color:
+}
+.a-h1{color:            }
+.a-h2{color:            }
+.a-h3{color:            }
+.a-h4{color:            }
+.a-h5{color:            }
+.a-h6{color:            }
+.form{
+  fieldset{}
+  input{}
+   select{}
+   type[radio]{}
+   checkbox{}
+}
+.a-links{ link-color
+    :visited
+    active
+    focus
+    hover-color
+          
+}
+.a-table{
+  thead{}
+  tbody{}
+  tfoot{}
+}
+.a-tbl-border{
+.a-odd-row{}
+.a-odd-row-h{}
+.a-even-row{}
+.a-even-row-h{}
+
+
+.a-button{}
+.a-footer{}
 */
 /*# sourceMappingURL=styles.css.map */

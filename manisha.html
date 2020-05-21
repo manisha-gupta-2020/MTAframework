@@ -17,31 +17,31 @@
     <link rel="stylesheet" href="dist/css/styles.min.css">
     <!-- <link rel="stylesheet" href="dist/css/tables.css"> -->
     <!-- <link rel="stylesheet" href="dist/css/buttons.css"> -->
-    <link rel="stylesheet" href="dist/css/manisha.css">
+    <!-- <link rel="stylesheet" href="dist/css/manisha.css"> -->
 
     <!--  link to jquery cdn-->
     <script src="dist/scripts/jquery-3.4.1.min.js"></script>
 
     <title>Framework examples</title>
 </head>
- <body class="cl-theme-bright">
+ <body class="cl-a-body px-10" >
 
-    <h1>trying use of themes</h1>
+    <h1>Framework testing</h1>
     <div >
-        <ul>
-            <li>item1</li>
-            <li>item2</li>
-            <li>item3</li>
-            <li>item4</li>
-            <li>item5</li>
+        <ul >
+            <li class="cl-inline-blk">item1</li>
+            <li class="cl-inline-blk">item2</li>
+            <li class="cl-inline-blk">item3</li>
+            <li class="cl-inline-blk">item4</li>
+            <li class="cl-inline-blk">item5</li>
         </ul>
     </div>
-<!--  
+ 
     <section id="id-responsive-table-sm">
       <h2>Example for using out responsive table classes on a small table.</h2>
       <p>Small tables with a size of upto 3 columns beome responsive by collapsing to stacked rows on small screen. At  screen breakpoint of 500px they change to the normal table.</p>  
       <h5>Use classes cl-table (for base styling) and cl-rwd-table(for responsive behavior)</h5>   
-      <table class="cl-table cl-rwd-table">
+      <table class="cl-table cl-res-table-sm">
         <caption>Small table</caption>
         <thead>
           <tr>
@@ -84,12 +84,12 @@
         </tbody>
       </table>
       </section>
-
+ 
       <section id="id-responsive-table-md">
         <h2>Example for using out responsive table classes on a medium size table.</h2>
         <p>Medium tables with a size of upto 5 columns become responsive by collapsing to stacked rows on small screen. At screen breakpoint of 768px they change to the normal table.</p>  
         <h5>Use classes cl-table (for base styling) and cl-rwd-table-md (for responsive behavior)</h5> 
-    <table class="cl-table cl-rwd-table-md">
+    <table class="cl-table cl-res-table-md">
         <caption>Medium table example</caption>
         <thead>
         <tr>
@@ -146,7 +146,7 @@
       <p>Tables becomes responsive by adding scoll bars to view the content. At screen breakpoint of 960px they change to the normal table.</p>  
       <h5>Use classes cl-table (for base styling) and cl-rwd-table-large (for responsive behavior)</h5> 
 
-        <table class="cl-table cl-rwd-table-large">
+        <table class="cl-table cl-res-table-lg">
             <caption>Large table</caption>
             <thead>
             <tr>
@@ -225,7 +225,7 @@
             </tbody>
         </table> 
     </section>
-  -->
+
   
   <section id="buttons">
       <div>
@@ -260,22 +260,23 @@
 
         <div id="headings">
             <h4>Headings</h4>
-            <ul >
-                <li><h1>Heading 1</h1></li>
-                <li><h2>Heading 2</h2></li>
-                <li><h3>Heading 3</h3></li>
-                <li><h4>Heading h4</h4></li>
-                <li><h5>Heading 5</h5></li>
-                <li><h6>Heading 6</h6></li>
+            <ul>
+                <li class="cl-inline-blk"><h1>Heading 1</h1></li>
+                <li class="cl-inline-blk"><h2>Heading 2</h2></li>
+                <li class="cl-inline-blk"><h3>Heading 3</h3></li>
+                <li class="cl-inline-blk"><h4>Heading h4</h4></li>
+                <li class="cl-inline-blk"><h5>Heading 5</h5></li>
+                <li class="cl-inline-blk"><h6>Heading 6</h6></li>
             </ul>
-            
-            
-            
-            
-            
-            
-            
-
+            <ul>
+                <li class="cl-inline-blk"><p>Heading 1</p></li>
+                <li class="cl-inline-blk"><p>Heading 2</p></li>
+                <li class="cl-inline-blk"><p>Heading 3</p></li>
+                <li class="cl-inline-blk"><p>Heading h4</p></li>
+                <li class="cl-inline-blk"><p>Heading 5</p></li>
+                <li class="cl-inline-blk"><p>Heading 6</p></li>
+            </ul>
+               
             <p class=".h1">This text has <code class="cl-code">class h1</code> applied to it</p>
         </div>
         <div>
@@ -379,13 +380,72 @@
 
 
     </section>
-    <!-- 
 
-Example of .cl-var
+    <section id="forms">
+        <fieldset>
+            <legend> Basic form elements</legend>
+    
+            <label for="fname">First Name:</label>
+            <input type="text" name="fname" id='fname'><br />
+            <label for="lname">Last Name:</label>
+            <input type="text" name="lname" id='lname'><br />
+            
+            <label for="browser">Browser:</label>
+            <input list="browsers" name="browser" id-="browser">
+            <datalist id="browsers">
+                <option value="Internet Explorer">
+                <option value="Firefox">
+                <option value="Chrome">
+                <option value="Opera">
+                <option value="Safari">
+            </datalist><br />
+            
+            <label for="month">Month:</label>
+            <select id="month">            
+                <option value="1">January</option>
+                <option value="2">February</option>
+                <option value="3">March</option>
+                <option value="4">April</option>
+                <option value="5">May</option>
+                <option value="6">June</option>
+                <option value="7">July</option>
+                <option value="8">August</option>
+                <option value="9">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+            </select><br />
+        
+            <label for="comments">Comments</label>
+            <textarea name="comments" id="comments" cols="10" rows="6" placeholder="Enter in 100 words"></textarea><br />
+        </fieldset>
+    
+    
+        <fieldset>
+            <legend>Check Boxes</legend>
+            <div>
+                <h4>Default checkbox</h4>
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                <label for="vehicle1"> I have a bike</label><br>
+                <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                <label for="vehicle2"> I have a car</label><br>
+                <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                <label for="vehicle3"> I have a boat</label>            
+            </div>
 
-Define some text as variables in a document:
-<p>The area of a triangle is: 1/2 x <var>b</var> x <var>h</var>, where <var>b</var> is the base, and <var>h</var> is the vertical height.</p>
-     -->
-
+        </fieldset>
+        <fieldset>
+            <legend>Radio Boxes</legend>
+            <div>
+                <h4>Default Radio buttons</h4>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label><br>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label><br>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label>            
+            </div>
+        </fieldset>
+    </section>
  </body>
 </html>
