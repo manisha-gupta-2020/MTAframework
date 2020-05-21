@@ -1,5 +1,5 @@
-$cl-a-evenrow: lightpink;
-$cl-a-oddrow: lightsteelblue;
+$cl-g-evenrow: lightpink;
+$cl-g-oddrow: lightsteelblue;
 $cl-b-evenrow: lightpink;
 $cl-b-oddrow: lightsteelblue;
 $cl-c-evenrow: lightpink;
@@ -28,11 +28,11 @@ $gray: #ccc;
 
 
 //odd-even-colors for the 3 themes
-.cl-a-even{background-color: transparentize($cl-a-evenrow, .6);}
-.cl-a-odd{background-color: transparentize($cl-a-oddrow, .6);}
+.cl-g-even{background-color: transparentize($cl-g-evenrow, .6);}
+.cl-g-odd{background-color: transparentize($cl-g-oddrow, .6);}
 
-.cl-a-even-hover:hover{background-color: transparentize($cl-a-evenrow, .6);}
-.cl-a-odd-hover:hover{background-color: transparentize($cl-a-oddrow, .6);}
+.cl-g-even-hover:hover{background-color: transparentize($cl-g-evenrow, .6);}
+.cl-g-odd-hover:hover{background-color: transparentize($cl-g-oddrow, .6);}
 
 .cl-b-even{background-color: transparentize($cl-b-evenrow, .6);}
 .cl-b-odd{background-color: transparentize($cl-b-oddrow, .6);}
@@ -78,15 +78,15 @@ $gray: #ccc;
     tbody {
         tr {
 			&:nth-child(odd){
-                background-color: transparentize($cl-a-oddrow, .7);
+                background-color: transparentize($cl-g-oddrow, .7);
                     &:hover{
-                        background-color: opacify($cl-a-oddrow, .3);
+                        background-color: opacify($cl-g-oddrow, .3);
                     }
                 }             
 			&:nth-child(even){
-                background-color: transparentize($cl-a-evenrow, .7);
+                background-color: transparentize($cl-g-evenrow, .7);
                     &:hover{
-                        background-color: opacify($cl-a-evenrow, .3);
+                        background-color: opacify($cl-g-evenrow, .3);
                     }
                 }  
             td {

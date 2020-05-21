@@ -147,6 +147,9 @@ h5,h6,.h5,.h6{
 .cl-inline-blk{
     display: inline-block;
 }
+.cl-inline-blk-list li{
+    display: inline-block;
+}
 .cl-blk{
     display: block;
 }
@@ -157,11 +160,11 @@ h5,h6,.h5,.h6{
 .cl-blk{
     display: block;
 }
-// list style position
-.ul-lsp-in{
+// list style position for ul and ol
+.cl-lsp-in{
     list-style: inside;
 }
-.ul-lsp-out{
+.cl-lsp-out{
     list-style: outside;
 }
 

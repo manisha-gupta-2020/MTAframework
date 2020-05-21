@@ -6,111 +6,92 @@ $color3: #d3cbcb;
 // <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet"> 
 
 /**************************************************************************************
-                THEME ONE
- **************************************************************************************/               
+                THEME ONE - named Graphit. All classes for this theme begin with .g
+ **************************************************************************************/   
+ // theme1 colors from tiana
+
+ $c1: #372f30;
+ $c2: #0c47c7;
+ $c3: #5f1d26;
+ $c4: #b42034;
+ $c5: #2c1fa0;
+ $c6: #6f9dff;
+ $c7: #554b4c;
+ $c8: #999;
+ $c9: #ccc;
+ $c10: #000;            
 // theme1 colors  
-$white: #fff;// rgb(255, 255, 255)
-$lblue: #dfebf0; //rgb(223, 235, 240)
-$lgray: #c2c2c2; //rgb(194, 194, 194)
-$mgray: #656666; //rgb(101, 102, 102)
-$dgray: #1e1f1f; // rgb(30, 31, 31)
-$blue1: #64d1d1; //rgb(100, 209, 209)
-$blue2: #1d305c; //rgb(29, 48, 92)
-$font-family1: 'Lato', sans-serif;
-$font-family2: 'Open Sans', sans-serif;
-$font-family-sans-serif: 'Lato','Open Sans', sans-serif;
-$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$white:  #fff;// rgb(255, 255, 255)
+$white2: #f7f7f7;// rgb(247, 247, 247)* header,footer color
+$lblue:  #e1ecf0; //rgb(225, 236, 240)*
+$lgray:  #c2c2c2; //rgb(194, 194, 194)
+$mgray:  #656666; //rgb(101, 102, 102)
+$dgray:  #1e1f1f; // rgb(30, 31, 31)
+$blue1:  #64d1d1; //rgb(100, 209, 209)
+$blue2:  #1d305c; //rgb(29, 48, 92) *head foot bgcolor, page txt, 
 
-// .cl-a-html{
-//   background-color: $lgray;
-
-// }
-.a-body{
-  font-family: $font-family1;
-  background-color: $lblue;
-  h1{color: $blue2; font-family: $font-family2;}
-  h2{color: $blue1}
-}
-.a-fonta{font-family: $font-family1;}
-
-
-
-
-.a-header{}
-.a-nav{}
-.a-h1{}
-.a-h2{}
-.a-h3{}
-.a-h4{}
-.a-h5{}
-.a-h6{}
-.form{
-  fieldset{}
-  input{}
-  // select{}
-  // type[radio]{}
-  // checkbox{}
-}
-.a-links{}
-.a-table{
-  thead{}
-  tbody{}
-  tfoot{}
-}
-.a-button{}
-.a-footer{}
-
+// variables for font-family
+$a-font-san-serif: Poppins,Lato,'Open Sans', sans-serif;
+$a-font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$a-fontwriting: cookie, satisfy, "dancing-script" ,cursive;
+$a-font-disp: "balsamiq sans",lobster, serif;
 /*
+font-family: 'Balsamiq Sans', cursive;
+font-family: 'Caveat Brush', cursive;
+font-family: 'Cookie', cursive;
+font-family: 'Dancing Script', cursive;
+font-family: 'Lato', sans-serif;
+font-family: 'Lobster', cursive;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Satisfy', cursive;
+*/
+
 .a-body{
-  font-family: 
-  background-color: 
+  font-family: $a-font-san-serif;
+  background-color: $lblue;
 }
-.a-font1{font-family:
-.a-font2{font-family:
-.a-font3{font-family:
-.a-font4{font-family:
-.a-font5{font-family:
+
+.a-font-san-serif{font-family:$a-font-san-serif;}
+.a-font-mono{font-family: $a-font-mono;  }
+.a-font-writing{font-family: $a-fontwriting;}
+.a-font-disp{font-family: $a-font-disp;}
+
 
 .a-header{
-  background-color:
-  color:
+  background-color:$blue2;
+  color: $white2;
 }
 .a-nav{
-  background-color:
-  color:
+  background-color: $blue1;
+  color: $white2;
 }
-.a-h1{color:            }
-.a-h2{color:            }
-.a-h3{color:            }
-.a-h4{color:            }
-.a-h5{color:            }
-.a-h6{color:            }
-.form{
-  fieldset{}
-  input{}
-   select{}
-   type[radio]{}
-   checkbox{}
-}
-.a-links{ link-color
-    :visited
-    active
-    focus
-    hover-color
-          
-}
-.a-table{
-  thead{}
-  tbody{}
-  tfoot{}
-}
-.a-tbl-border{
-.a-odd-row{}
-.a-odd-row-h{}
-.a-even-row{}
-.a-even-row-h{}
-
-
-.a-button{}
-.a-footer{}
-*/
+// .a-nav-links{ colors
+// link:
+//     visited:
+//     active:
+//     focus:
+//     hover:
+// }
+// .a-nav{}
+// .a-h1{}
+// .a-h2{}
+// .a-h3{}
+// .a-h4{}
+// .a-h5{}
+// .a-h6{}
+// .form{
+//   fieldset{}
+//   input{}
+//   // select{}
+//   // type[radio]{}
+//   // checkbox{}
+// }
+// .a-links{}
+// .a-table{
+//   thead{}
+//   tbody{}
+//   tfoot{}
+// }
+// .a-button{}
+// .a-footer{}
