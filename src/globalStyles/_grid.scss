@@ -1,10 +1,15 @@
 
 
+
+
 /* default = phone size < 360px
 pl = first break - phone landscape @ 360px
 tb = second break - tablet @ 640px
 tl = third break - tablet landscape @ 768px
 lg = fourth break - desktop @ 960px 
+
+
+
 discuss the following:
 1 - do we want push, pull, offset functionality
 2 - what do we want to name them
@@ -47,11 +52,15 @@ ab
       padding: 0;
     }
     
+
   .col-01, .col-02, .col-03, .col-04, .col-05, .col-06, .col-07, .col-08, .col-09, .col-10, .col-11, .col-12, .col, 
   .col-pl-01, .col-pl-02, .col-pl-03, .col-pl-04, .col-pl-05, .col-pl-06, .col-pl-07, .col-pl-08, .col-pl-09, .col-pl-10, .col-pl-11, .col-pl-12, .col-pl, 
   .col-tb-01, .col-tb-02, .col-tb-03, .col-tb-04, .col-tb-05, .col-tb-06, .col-tb-07, .col-tb-08, .col-tb-09, .col-tb-10, .col-tb-11, .col-tb-12, .col-tb, 
   .col-tl-01,  .col-tl-02, .col-tl-03, .col-tl-04, .col-tl-05, .col-tl-06, .col-tl-07, .col-tl-08, .col-tl-09, .col-tl-10, .col-tl-11, .col-tl-12, .col-tl, 
   .col-lg-01, .col-lg-02, .col-lg-03, .col-lg-04, .col-lg-05, .col-lg-06, .col-lg-07, .col-lg-08, .col-lg-09, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg {
+=======
+  .col-01, .col-02, .col-03, .col-04, .col-05, .col-06, .col-07, .col-08, .col-09, .col-10, .col-11, .col-12, .col, .col-pl-01, .col-pl-02, .col-pl-03, .col-pl-04, .col-pl-05, .col-pl-06, .col-pl-07, .col-pl-08, .col-pl-09, .col-pl-10, .col-pl-11, .col-pl-12, .col-pl, .col-tb-01, .col-tb-02, .col-tb-03, .col-tb-04, .col-tb-05, .col-tb-06, .col-tb-07, .col-tb-08, .col-tb-09, .col-tb-10, .col-tb-11, .col-tb-12, .col-tb, .col-tl-01,  .col-tl-02, .col-tl-03, .col-tl-04, .col-tl-05, .col-tl-06, .col-tl-07, .col-tl-08, .col-tl-09, .col-tl-10, .col-tl-11, .col-tl-12, .col-tl, .col-lg-01, .col-lg-02, .col-lg-03, .col-lg-04, .col-lg-05, .col-lg-06, .col-lg-07, .col-lg-08, .col-lg-09, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg {
+
       position: relative;
       width: 100%;
       min-height: 1px;
@@ -120,7 +129,9 @@ ab
         -ms-flex: 0 0 50%;
             flex: 0 0 50%;
     max-width: 50%;
+
     flex-wrap: row;
+
     }  
   .col-07 {
     -webkit-box-flex: 0;
@@ -1205,3 +1216,8 @@ ab
     }
   }
   
+
+
+  
+  /*ab - inspired by bootstrap*/
+
