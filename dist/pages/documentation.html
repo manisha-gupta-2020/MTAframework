@@ -20,47 +20,216 @@
     <link rel="stylesheet" href="dist/css/styles.min.css">
     <!-- <link rel="stylesheet" href="dist/css/tables.css"> -->
     <!-- <link rel="stylesheet" href="dist/css/buttons.css"> -->
-    <!-- <link rel="stylesheet" href="dist/css/manisha.css"> -->
+    <link rel="stylesheet" href="dist/css/framework.min.css">
 
     <!--  link to jquery cdn-->
     <script src="dist/scripts/jquery-3.4.1.min.js"></script>
 
-    <title>Framework examples</title>
+    <title>MTA Framework for website development. Responsive, easy to use, uses HTMl, CSS, Javascript </title>
 </head>
-
- <body class="a-body px-10" >
-    <header class="a-header">
-        <h1 class="a-header">MTA Framework </h1>
+ <body >
+    <header>
+        <h1>MTA Framework</h1>
     </header>
-    
-    <nav class="a-nav py-10">
-        <ul class="cl-inline-blk-list my-10">
-            <li class="cl-txt-upper px-5 py-10">home</li>
-            <li class="cl-txt-upper">documentation</li>
-            <li class="cl-txt-upper">examples</li>
-            <li class="cl-txt-upper">Icons</li>
-            <li class="cl-txt-upper">about</li>
-            <li class="cl-txt-upper">Contact</li>
+
+    <nav >
+        <ul >
+            <li class="cl-inline-blk">Home</li>
+            <li class="cl-inline-blk">Documentation</li>
+            <li class="cl-inline-blk">Get Started</li>
+            <!-- <li class="cl-inline-blk">Color Themes</li> -->
+            <li class="cl-inline-blk">About</li>
+            <li class="cl-inline-blk">Contact</li>
         </ul>
     </nav>
 
-    <div >
 
-        <ul >
-            <li class="cl-inline-blk">item1</li>
-            <li class="cl-inline-blk">item2</li>
-            <li class="cl-inline-blk">item3</li>
-            <li class="cl-inline-blk">item4</li>
-            <li class="cl-inline-blk">item5</li>
-        </ul>
-    </div>
     <section id="tables">
+        <div class="cl-headers">
+            <h2>Tables</h2>
+        </div>
+        <div class="wrapper-fluid" id="tabletypes">
+            <div>
+                <p class="cl-bold">We provide a variety of options to style your tables.</p>
+                <ul class="ins-list">
+                    <li> Default basic styling for every table includes table border and header border. Use class <code class="cl-code">.cl-table-basic</code>  </li>     
+                    <li> Fully styled table is available with borders, zebra stripes and hover. Use class <code class="cl-code">.cl-table</code>  </li>  
+                    <li> Zebra striping can be achieved by applying classes on alternate, even or odd rows. You may stripe even, odd, or both rows. Class can be overrriden to change the color of the stripe. Use classes <code class="cl-code">.cl-a-even</code> and  <code class="cl-code">.cl-a-odd</code></li> 
+                    <li> Hover option classes for striped rows are applied similar to zebra striping. Colors can be changed. Classes are <code class="cl-code">.cl-a-even-hover</code> and  <code class="cl-code">.cl-a-odd-hover</code></li>      
+                    <li> Highlighter classes are available to highlight a particular row <code class="cl-code">.cl-hightlight-green</code> , <code class="cl-code">.cl-highlight-yellow</code> and <code class="cl-code">.cl-highlight-alert</code></li>  
+                </ul>
+            </div>
+            <code >
+                <pre class="cl-code">
+                    &lttable class="cl-table-basic"&gt
+                        &ltcaption&gt Basic table&lt/caption&gt
+                        &ltthead&gt
+                        &lttr&gt
+                            &ltth&gtName&lt/th&gt
+                            &ltth&gtCategory&lt/th&gt
+                            &ltth&gtPlan&lt/th&gt
+                        &lt/tr&gt
+                        &lt/thead&gt
+                        &lttbody&gt
+                        &lttr class="cl-highlight-green"&gt
+                            &lttd&gtAnthony Zeid&lt/td&gt
+                            &lttd&gt3&lt/td&gt
+                            &lttd&gtWeekly&lt/td&gt
+                        &lt/tr&gt
+                        &lttr class="cl-a-even cl-a-even-hover"&gt
+                            &lttd&gtRoman&lt/td&gt
+                            &lttd&gt2&lt/td&gt
+                            &lttd&gtDaily&lt/td&gt
+                        &lt/tr&gt
+                        &lttr class="cl-highlight-yellow"&gt
+                            &lttd&gtRina Joy&lt/td&gt
+                            &lttd&gt1&lt/td&gt
+                            &lttd&gtmonthly&lt/td&gt
+                        &lt/tr&gt      
+                        &lttr class="cl-highlight-alert"&gt
+                            &lttd&gtTina Turner&lt/td&gt
+                            &lttd&gt1&lt/td&gt
+                            &lttd&gtAnnual&lt/td&gt
+                        &lt/tr&gt                              
+                    &lt/table&gt  
+                </pre>
+            </code>    
+            <div class="row cl-code-bg">
+                <div class="col cl-self-center cl-code-result">
+                    <table class="cl-table-basic">
+                        <caption> Basic table</caption>
+                        <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Category</th>
+                            <th>Plan</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Anthony Zeid</td>
+                            <td>3</td>
+                            <td>Weekly</td>
+                        </tr>
+                        <tr>
+                            <td>Roman</td>
+                            <td>2</td>
+                            <td>Daily</td>
+                        </tr>
+                        <tr>
+                            <td>Rina Joy</td>
+                            <td>1</td>
+                            <td>monthly</td>
+                        </tr>    
+                        <tr>
+                            <td>Tina Turner</td>
+                            <td>1</td>
+                            <td>Annual</td>
+                        </tr>                
+                    </table>                     
+                </div>
+                <div class="col cl-self-center cl-code-result">
+                    <table class="cl-table-basic">
+                        <caption> Zebra Striped even rows</caption>
+                        <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Category</th>
+                            <th>Plan</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Anthony Zeid</td>
+                            <td>3</td>
+                            <td>Weekly</td>
+                        </tr>
+                        <tr class="cl-a-even cl-a-even-hover">
+                            <td>Roman</td>
+                            <td>2</td>
+                            <td>Daily</td>
+                        </tr>
+                        <tr>
+                            <td>Rina Joy</td>
+                            <td>1</td>
+                            <td>monthly</td>
+                        </tr>      
+                        <tr class="cl-a-even cl-a-even-hover">
+                            <td>Tina Turner</td>
+                            <td>1</td>
+                            <td>Annual</td>
+                        </tr>                             
+                    </table>                     
+                </div>   
+                <div  class="col cl-self-center cl-code-result">
+                    <table class="cl-table-basic">
+                        <caption> Highlighted rows</caption>
+                        <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Category</th>
+                            <th>Plan</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="cl-highlight-green">
+                            <td>Anthony Zeid</td>
+                            <td>3</td>
+                            <td>Weekly</td>
+                        </tr>
+                        <tr>
+                            <td>Roman</td>
+                            <td>2</td>
+                            <td>Daily</td>
+                        </tr>
+                        <tr class="cl-highlight-yellow">
+                            <td>Rina Joy</td>
+                            <td>1</td>
+                            <td>monthly</td>
+                        </tr>   
+                        <tr class="cl-highlight-alert">
+                            <td>Tina Turner</td>
+                            <td>1</td>
+                            <td>Annual</td>
+                        </tr>                                
+                    </table>                     
+                </div>             
+            </div>
+        </div>
+
+        <h4 class="cl-headers">Responsive Tables</h4>
+        <p class="cl-bold"> We provide three breakpoints for responsive tables.
+            <ul class="ins-list">
+                <li> A small table of 3X3 is responsive till the small breakpoint at 640px. Use class <code class="cl-code">.cl-res-table-sm</code>  </li>
+                <li>A medium size table of 5x3 is responsive till the medium breakpoint at 768px. Use class <code class="cl-code">.cl-res-table-md</code>  </li>
+                <li>A larger table, larger than medium,  is responsive till the last breakpoint at 960px. Use class <code class="cl-code">.cl-res-table-lg</code>  </li>
+                <li>Pre-styled table. To use the styling applied to the folowing tables use class <code class="cl-code">.cl-table</li>
+            </ul>
+            <p class="note">
+                In order to have the column heading display on the responsive table they need to be set on the td.< br />
+                For example for the small table you will have to specify the following in the media query. There are three column headings so we go upto nth-of-type(3).
+            </p>
+            <code >
+                <pre class="cl-code">
+@media screen and(max-width: 640px){
+    .cl-res-table-sm td:nth-of-type(1):before {
+        content: "Heading Col1";
+        }
+        .cl-res-table-sm td:nth-of-type(2):before {
+        content: "Heading Col2";
+        }
+        .cl-res-table-sm td:nth-of-type(3):before {
+        content: "Heading Col3";
+        }           
+}
+}
+            </pre>
+            </code>
+        </p>
         <section id="id-responsive-table-sm">
-        <h2>Example for using out responsive table classes on a small table.</h2>
-        <p>Small tables with a size of upto 3 columns beome responsive by collapsing to stacked rows on small screen. At  screen breakpoint of 500px they change to the normal table.</p>  
-        <h5>Use classes cl-table (for base styling) and cl-rwd-table(for responsive behavior)</h5>   
+ 
         <table class="cl-table cl-res-table-sm">
-            <caption>Small table</caption>
+            <caption class="h4">Responsive Small Table</caption>
             <thead>
             <tr>
                 <th>Heading Col 1</th>
@@ -84,31 +253,13 @@
                 <td>Data Col 2c</td>
                 <td>Data Col 3c</td>
             </tr>
-            <tr>
-                <td>Data Col 1d</td>
-                <td>Data Col 2d</td>
-                <td>Data Col 3d</td>
-            </tr>
-            <tr>
-                <td>Data Col 1e</td>
-                <td>Data Col 2e</td>
-                <td>Data Col 3e</td>
-            </tr>
-            <tr>
-                <td>Data Col 1f</td>
-                <td>Data Col 2f</td>
-                <td>Data Col 3f</td>
-            </tr>
             </tbody>
         </table>
         </section>
     
         <section id="id-responsive-table-md">
-            <h2>Example for using out responsive table classes on a medium size table.</h2>
-            <p>Medium tables with a size of upto 5 columns become responsive by collapsing to stacked rows on small screen. At screen breakpoint of 768px they change to the normal table.</p>  
-            <h5>Use classes cl-table (for base styling) and cl-rwd-table-md (for responsive behavior)</h5> 
         <table class="cl-table cl-res-table-md">
-            <caption>Medium table example</caption>
+            <caption class="h4 cl-txt-capital">Responsive Medium Table</caption>
             <thead>
             <tr>
                 <th>Heading Col 1</th>
@@ -137,35 +288,18 @@
                 <td>Data Col 4c</td>
             </tr>
             <tr>
-                <td>Data Col 1d</td>
-                <td>Data Col 2d</td>
-                <td>Data Col 3d</td>
-                <td>Data Col 4d</td>
-            </tr>
-            <tr>
-                <td>Data Col 1e</td>
-                <td>Data Col 2e</td>
-                <td>Data Col 3e</td>
-                <td>Data Col 4e</td>
-            </tr>
-            <tr>
                 <td>Data Col 1f</td>
                 <td>Data Col 2f</td>
                 <td>Data Col 3f</td>
-                <td>Data Col 4f Data Col 4f Data Col 4f Data Col 4f</td>
+                <td>This cell contains longer data</td>
             </tr>
             </tbody>
         </table>   
         </section>
 
         <section id="id-responsive-table-lg">
-        <h2>Example for using out responsive table classes on a large size table.</h2>
-        <p>Tables are considered large if they have more than 6 columns with medium size data. </p>
-        <p>Tables becomes responsive by adding scoll bars to view the content. At screen breakpoint of 960px they change to the normal table.</p>  
-        <h5>Use classes cl-table (for base styling) and cl-rwd-table-large (for responsive behavior)</h5> 
-
             <table class="cl-table cl-res-table-lg">
-                <caption>Large table</caption>
+                <caption class="h4 cl-txt-capital">Responsive Large table</caption>
                 <thead>
                 <tr>
                     <th>Heading Col 1</th>
@@ -209,45 +343,15 @@
                     <td>Data Col 6c</td>
                     <td>Data Col 7c</td>          
                     <td>Data Col 8c</td>
-                </tr>
-                <tr>
-                    <td>Data Col 1d</td>
-                    <td>Data Col 2d</td>
-                    <td>Data Col 3d</td>
-                    <td>Data Col 4d</td>
-                    <td>Data Col 5d</td>
-                    <td>Data Col 6d</td>
-                    <td>Data Col 7d</td>          
-                    <td>Data Col 8d</td>
-                </tr>
-                <tr>
-                    <td>Data Col 1e</td>
-                    <td>Data Col 2e</td>
-                    <td>Data Col 3e</td>
-                    <td>Data Col 4e</td>
-                    <td>Data Col 5e</td>
-                    <td>Data Col 6e Lorem ipsum dolor sit amet.</td>
-                    <td>Data Col 7e Lorem, ipsum dolor.</td>          
-                    <td>Data Col 8e</td>
-                </tr>
-                <tr>
-                    <td>Data Col 1f</td>
-                    <td>Data Col 2f</td>
-                    <td>Data Col 3f</td>
-                    <td>Data Col 4f Data Col 4f Data Col 4f Data Col 4f</td>
-                    <td>Data Col 5f Lorem ipsum dolor sit amet.</td>
-                    <td>Data Col 6f Lorem ipsum dolor sit amet consectetur.</td>
-                    <td>Data Col 7f</td>          
-                    <td>Data Col 8f</td>
-                </tr>
+                 </tr>
                 </tbody>
             </table> 
         </section>
-    </section>
+    </section> <!-- end section tables -->
   
   <section id="buttons">
       <div>
-          <h2>Default buttons</h2>
+          <h4>Default buttons</h4>
           <button>Default</button>
           <!-- <button type=submit>Button type submit</button> -->
           <!-- <button>Submit</button> -->
@@ -256,7 +360,7 @@
           <input type="reset" value="input type reset">
       </div>
       <div>
-        <h2>Button sizes</h2>
+        <h4>Button sizes</h4>
         <button class="cl-btn-xsm">xsm button</button>
         <button class="cl-btn-sm">sm button</button>
         <button class="cl-btn">reg button</button>
@@ -265,7 +369,7 @@
       </div>
 
       <div>
-        <h2>Button Styles</h2>
+        <h4>Button Styles</h4>
         <button class="cl-btn-sharp">sharp</button>
         <button class="cl-btn-soft">soft</button>
         <button class="cl-btn-oval">oval</button>
@@ -277,26 +381,70 @@
     <section id="typography">
 
         <div id="headings">
-            <h4>Headings</h4>
-            <ul>
-                <li class="cl-inline-blk"><h1>Heading 1</h1></li>
-                <li class="cl-inline-blk"><h2>Heading 2</h2></li>
-                <li class="cl-inline-blk"><h3>Heading 3</h3></li>
-                <li class="cl-inline-blk"><h4>Heading h4</h4></li>
-                <li class="cl-inline-blk"><h5>Heading 5</h5></li>
-                <li class="cl-inline-blk"><h6>Heading 6</h6></li>
-            </ul>
-            <ul>
-                <li class="cl-inline-blk"><p>Heading 1</p></li>
-                <li class="cl-inline-blk"><p>Heading 2</p></li>
-                <li class="cl-inline-blk"><p>Heading 3</p></li>
-                <li class="cl-inline-blk"><p>Heading h4</p></li>
-                <li class="cl-inline-blk"><p>Heading 5</p></li>
-                <li class="cl-inline-blk"><p>Heading 6</p></li>
-            </ul>
-               
-            <p class=".h1">This text has <code class="cl-code">class h1</code> applied to it</p>
-        </div>
+            <h2>Headings</h2>
+            <p class="p5">
+                The framework provides responsive headings for h1 thru h6. They have been scaled using media queries. <br />
+                The same styles are also provided as classes h1 through h6, to be used anywhere on the website.
+            </p>
+
+            <!-- <figure class="cl-figure">
+                <img src="dist/images/heading-size.JPG" alt="heading sizing chart" class="cl-img-fluid">
+                <figcaption>Heading sizing chart</figcaption>
+            </figure> -->
+
+            <div class="wrapper">
+                <h4>Using element tag h1 through h6 </h4>
+                <div class=" row cl-code-bg ">                    
+                    <code class="col cl-align-center  cl-self-center"> 
+                        <pre class="cl-code">
+&lth1&gt Heading1 &lt/h1&gt <br />
+&lth1&gt Heading2 &lt/h1&gt <br />
+&lth1&gt Heading3 &lt/h1&gt <br />
+&lth1&gt Heading4 &lt/h1&gt <br />
+&lth1&gt Heading5 &lt/h1&gt <br />
+&lth1&gt Heading6 &lt/h1&gt <br />
+                        </pre>
+                    </code>    
+
+                
+                    <div class="col cl-code-result ">
+                        <h1>Heading 1</h1>
+                        <h2>Heading 2</h2>
+                        <h3>Heading 3</h3>
+                        <h4>Heading 4</h4>
+                        <h5>Heading 5</h5>
+                        <h6>Heading 6</h6>
+                    </div>
+                </div>
+            </div>
+                <br /> 
+            <div class="wrapper">    
+                <h4>Heading style on p element using classes h1 through h6 </h4>
+                <div class=" row cl-code-bg ">                    
+                    <code class="col  cl-align-center cl-self-center"> 
+                        <pre class="cl-code ">
+&ltp class="h1"&gtHeading 1&lt/p&gt <br />
+&ltp class="h2"&gtHeading 2&lt/p&gt <br />
+&ltp class="h3"&gtHeading 3&lt/p&gt <br />
+&ltp class="h4"&gtHeading 4&lt/p&gt <br />
+&ltp class="h5"&gtHeading 5&lt/p&gt <br />
+&ltp class="h6"&gtHeading 6&lt/p&gt <br />
+                        </pre>
+                    </code>               
+                
+                    <div class="col  cl-code-result">
+                        <p class="h1">Heading 1</p>
+                        <p class="h2">Heading 2</p>
+                        <p class="h3">Heading 3</p>
+                        <p class="h4">Heading 4</p>
+                        <p class="h5">Heading 5</p>
+                        <p class="h6">Heading 6</p>
+                    </div>
+                </div>   
+            </div>              
+
+        </div> <!-- end headings -->
+
         <div>
             <h4>Example of bold, italic and cite</h4>
             <p>Define some <span class="cl-bold">text as variables</span> text as variables in a document:</p>
@@ -467,3 +615,4 @@
     </section>
  </body>
 </html>
+

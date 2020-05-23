@@ -17,14 +17,14 @@
     max-width: 100%;
     height: auto;
    }
-/* other possible image classes
-.cl-img-border{
-    border: solid 1px #ccc;
-}
-.cl-img-outline{}
-.cl-img-padding{}
-.cl-img-margin{5px 0;}
-*/
+/* other possible image classes */
+.cl-img-circle{   border-radius: 50%; }
+.cl-img-rounded{ border-radius: 5%;}
+.cl-img-thumbnail{ width: 60px; height: 60px;}
+.cl-img-outline{ outline: solid 1px $lgray;}
+.cl-img-padding{padding: .5em;}
+.cl-img-margin{padding: .5em;}
+
 
   /*responsive map*/
   .cl-map-wrapper{

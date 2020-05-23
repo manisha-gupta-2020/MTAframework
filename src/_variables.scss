@@ -1,15 +1,11 @@
 $white: #fff;
 $black: #000;
-$teal: teal;
-$gray: #ccc;
-
-
-
+// $teal: teal;
+// $gray: #ccc;
 
 $background-html: #fff;
 $background-body: $white;
 $background-body: #ccc;
-
 
 //color variables for table
 
@@ -38,11 +34,17 @@ $breakpoint-xsm: 500px; //used only for tables
 $breakpoint-sm: 640px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 960px;
+$code:   #e61212;
 
-//setting colors for theme a
-$bg-html-th1: #ddd;
-$bg-html-th2: lightblue;
+// theme1 colors  
 
-$bg-body-th1: lightblue;
-$bg-body-th2: #ccc;
+$white2: #f7f7f7;// rgb(247, 247, 247)* header,footer color
+$lblue:  #e1ecf0; //rgb(225, 236, 240)*
+$lgray:  #c2c2c2; //rgb(194, 194, 194)
+$mgray:  #656666; //rgb(101, 102, 102)
+$dgray:  #1e1f1f; // rgb(30, 31, 31)
+// $blue1:  #64d1d1; //rgb(100, 209, 209)
+$blue1:  #1d8d8d; //rgb(100, 209, 209)
+$blue2:  #1d305c; //rgb(29, 48, 92) *head foot bgcolor, page txt, 
+$code:   #e61212; //
 
