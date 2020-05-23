@@ -3,9 +3,302 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>new519</title>
+    <title>jQuery - datapicker, tabs, accordion</title>
+    <!-- <link rel="stylesheet" href="dist/css/styles.min.css"> -->
+    <!-- <script src="dist/scripts/jquery-3.4.1.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <!-- 517 jQueryUI add for data & accordion /ui-darkness-->
+ <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+<style>
+    /* main {margin: 0 auto;
+        max-width: 960;} */
+        body {
+  font-family: Arial, Helvetica, sans-serif;
+ 
+}
+
+#wrapper {
+  margin: 2em auto;
+  padding: 2em;
+  max-width: 650px;
+  border: solid 3px #ccc;
+  background-color: rgba(255,255,255,.8);
+  /* border-radius: 15px; */
+  /* position: relative; */
+}
+h3 {background-color: #ededed;}
+
+
+/* 523 for text area shadow, no work */
+.shadow-textarea textarea.form-control::placeholder {
+    font-weight: 300;
+}
+.shadow-textarea textarea.form-control {
+    padding-left: 0.8rem;
+}
+</style>
+
+ <script>
+     $(function() {
+//add datapicker & accordion, jqueryUI
+$( "#datepicker" ).datepicker({
+            changeMonth: true,
+            changeYear: true
+          });
+$( "#accordion" ).accordion();
+
+
+//the Tabs widget 
+  $( "#tabs" ).tabs();
+        
+        //accordion	
+     // $( "#accordion" ).accordion();
+     $( "#accordionNew" ).accordion({
+  collapsible: true,
+  heightStyle: "content"
+}); 
+
+     });
+ </script>
 </head>
 <body>
-    
+<main id="wrapper">
+  <hr>
+<h1>Setting up the js, jQuery elements</h1>
+<!-- <h1>Setting up the head tag</h1> -->
+<hr>
+<!-- <p>setting the head</p> -->
+<p>STEP 1: setting the head</p>
+<!-- from em-tiger -step1-->
+<div>
+  <label for="">*</label>
+  <textarea name="" id="" cols="60" rows="10">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar, tabs, accordion</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  </textarea>
+</div>
+
+<h3>Example of a calendar, style CALM</h3>
+
+<p>STEP 2a: setting the script for Calendar</p>
+<!-- from em-tiger -step2-->
+<div>
+  <label for="">*</label>
+  <textarea name="" id="" cols="60" rows="10">
+    <script>
+      $(function() {
+ //add datapicker 
+ $( "#datepicker" ).datepicker({
+             changeMonth: true,
+             changeYear: true
+           });
+      });
+  </script>
+  </textarea>
+</div>
+
+<p>STEP 2b: setting HTML for Calendar</p>
+<!-- from em-tiger -step2-->
+<div>
+  <label for="">*</label>
+  <textarea name="" id="" cols="60" rows="4">
+    <h3>Example of a calendar, style CALM</h3>
+    <p>Date: <input type="text" id="datepicker"></p>
+    <br>
+  </textarea>
+</div>
+<!-- 523-calendar -->
+<h4>Example of a calendar, style CALM</h4>
+    <p>Date: <input type="text" id="datepicker"></p>
+  <br>
+  <hr><hr>
+
+
+  <h3>Example of accordion, style CALM</h3>
+
+<p>STEP 3a: setting the script for Accordion</p>
+<!-- from em-tiger -step2-->
+<div>
+  <label for="">*</label>
+  <textarea name="" id="" cols="60" rows="10">
+    <script>
+      $(function() {
+         //accordion	
+      $( "#accordionNew" ).accordion({
+   collapsible: true,
+   heightStyle: "content"
+ }); 
+      });
+  </script>
+  </textarea>
+</div>
+
+<p>STEP 3b: setting HTML for Accordion</p>
+<!-- from em-tiger -step2-->
+<div>
+  <label for="">*</label>
+  <textarea name="" id="" cols="60" rows="10">
+      <div id="accordionNew">
+        <h3>Section 1</h3>
+        <div> <img src="#" alt=""/>
+            <p>your wonderful text1 is going here</p>
+          </div>
+          <h3>Section 2</h3>
+          <div>
+            <img src="#" alt=""/>
+            <p>your wonderful text2 is going here</p>
+          </div>
+        <h3>Section 3</h3>
+        <div>
+          <img src="#" alt=""/>
+          <p>your wonderful text3 is going here</p>
+        </div>
+      </div>
+  </textarea>
+</div>
+
+<h4>Example of Accordion, style CALM</h4>
+<div id="accordionNew">
+  <h3>Section 1</h3>
+  <div> <img src="#" alt=""/>
+      <p>your wonderful text1 is going here</p>
+    </div>
+    <h3>Section 2</h3>
+    <div>
+      <img src="#" alt=""/>
+      <p>your wonderful text2 is going here</p>
+    </div>
+  <h3>Section 3</h3>
+  <div>
+    <img src="#" alt=""/>
+    <p>your wonderful text3 is going here</p>
+  </div>
+</div>
+<br>
+<hr><hr>
+
+
+<h3>Example of Tabs, style CALM</h3>
+
+<p>STEP 4a: setting the script for Tabs</p>
+<!-- from em-tiger -step2-->
+<div>
+  <label for="">*</label>
+  <textarea name="" id="" cols="60" rows="10">
+    <script>
+      $(function() {
+ //the Tabs widget 
+   $( "#tabs" ).tabs();
+      });
+  </script>
+  </textarea>
+</div>
+
+<p>STEP 4b: setting the HTML for Tabs</p>
+<!-- from em-tiger -step2-->
+<div>
+  <label for="">*</label>
+  <textarea name="" id="" cols="60" rows="10">
+      <!--  TABS -->     
+              <!-- style="width: 47%;" -->
+              <div id = "tabs" style="margin: 15px 0;">
+                <ul>
+                    <li><a href = "#tabs-1">Tab 1</a></li>
+                    <li><a href = "#tabs-2">Tab 2</a></li>
+                    <li><a href = "#tabs-3">Tab 3</a></li>
+                 </ul>                    
+                 <div id = "tabs-1">
+                    <p><strong>Title 1</strong></p>
+                    <img src="#"  alt="">
+                    <p>your important info1 is going here</p>
+                 </div>                    
+                 <div id = "tabs-2">
+                    <p><strong>Title 2</strong></p>
+                    <img src="#" alt="">
+                    <p>your important info2 is going here</p>
+                 </div>
+                 <div id = "tabs-3">
+                    <p><strong>Title e</strong></p>
+                    <img src="#"  alt="">
+                    <p>your important info3 is going here</p>
+                 </div>
+              </div>
+  </textarea>
+</div>
+
+<h4>Example of Accordion, style CALM</h4>
+  <!--  TABS -->     
+ <!-- you can add style, for example: style="width: 47%;" -->
+              <div id = "tabs" style="margin: 15px 0;">
+                <ul>
+                    <li><a href = "#tabs-1">Tab 1</a></li>
+                    <li><a href = "#tabs-2">Tab 2</a></li>
+                    <li><a href = "#tabs-3">Tab 3</a></li>
+                 </ul>                    
+                 <div id = "tabs-1">
+                    <p><strong>Title 1</strong></p>
+                    <img src="#"  alt="">
+                    <p>your important info1 is going here</p>
+                 </div>                    
+                 <div id = "tabs-2">
+                    <p><strong>Title 2</strong></p>
+                    <img src="#" alt="">
+                    <p>your important info2 is going here</p>
+                 </div>
+                 <div id = "tabs-3">
+                    <p><strong>Title e</strong></p>
+                    <img src="#"  alt="">
+                    <p>your important info3 is going here</p>
+                 </div>
+              </div>
+
+<br><hr><hr>
+
+<div class="sm-form7">
+  <textarea id="form1" class="md-textarea form-control" rows="10">order
+<!-- <p id="nReg"></p>
+<p id="aReg"></p>
+<p id="cReg"></p> -->
+  </textarea><br>
+  <label for="form7"> textarea</label>
+</div>
+
+<!-- 523-fromW3school -->
+<!-- <div class="form-group">
+  <label for="comment">Comment:</label>
+  <textarea class="form-control" rows="5" id="comment"></textarea>
+</div> -->
+
+
+<!-- <div class="form-group">
+  <label for="exampleFormControlTextarea3">Rounded corners</label>
+  <textarea class="form-control" id="exampleFormControlTextarea3" rows="7"></textarea>
+</div>
+
+<div class="form-group shadow-textarea">
+  <label for="exampleFormControlTextarea6">Shadow and placeholder</label>
+  <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3" placeholder="Write something here..."></textarea>
+</div> -->
+
+
+<hr>
+
+
+
+
+
+
+    <h2>jQuery - datapicker, tabs, accordion</h2>
+    <h3>Style 'Calm'</h3>
+    <div class="datapicker523"></div>
+
+
+    </main>
 </body>
 </html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery - datapicker, tabs, accordion</title>
+    <!-- <link rel="stylesheet" href="dist/css/styles.min.css"> -->
+    <!-- <script src="dist/scripts/jquery-3.4.1.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <!-- 517 jQueryUI add for data & accordion /ui-darkness-->
+ <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/sunny/jquery-ui.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+<style>
+    /* main {margin: 0 auto;
+        max-width: 960;} */
+        body {
+  font-family: Arial, Helvetica, sans-serif;
+ 
+}
+
+#wrapper {
+  margin: 2em auto;
+  padding: 2em;
+  max-width: 650px;
+  border: solid 3px #ccc;
+  background-color: rgba(255,255,255,.8);
+  /* border-radius: 15px; */
+  /* position: relative; */
+}
+h3 {background-color: #ededed;
+margin-bottom: 15px;}
+</style>
+
+ <script>
+     $(function() {
+//add datapicker & accordion, jqueryUI
+$( "#datepicker" ).datepicker({
+            changeMonth: true,
+            changeYear: true
+          });
+$( "#accordion" ).accordion();
+
+
+//the Tabs widget 
+  $( "#tabs" ).tabs();
+        
+        //accordion	
+     // $( "#accordion" ).accordion();
+     $( "#accordionNew" ).accordion({
+  collapsible: true,
+  heightStyle: "content"
+}); 
+
+     });
+ </script>
+</head>
+<body>
+<main id="wrapper">
+    <h2>jQuery - datapicker, tabs, accordion</h2>
+    <h3>Style 'Grafic'</h3>
+    <div class="datapicker523"></div>
+<hr>
+    <h3>Example of a calendar, style CALM</h3>
+    <p>Date: <input type="text" id="datepicker"></p>
+    <br>
+<hr>
+    <h3>Example of a toggle-accordion, style CALM</h3>
+    <div class="flexTab">
+        <div id="accordionNew">
+           <h3>Section 1</h3>
+           <div> <img src="#" alt=""/>
+               <p>
+                   Throughout the years we have worked together, we have always been amazed at the level of dedication and professionalism.
+               </p>
+             </div>
+             <h3>Section 2</h3>
+             <div>
+               <img src="#" alt=""/>
+               <p> Incredible results from an incredible effort by the  team!
+               </p>
+             </div>
+           <h3>Section 3</h3>
+           <div>
+             <img src="#" alt=""/>
+             <p>   Incredible results from an incredible effort by the  team!
+             </p>
+           </div>
+         </div>
+<hr>
+         <h3>Example of a tabs, style CALM</h3>
+           <div>
+              <!--  TABS -->     
+              <!-- style="width: 47%;" -->
+              <div id = "tabs" style="margin: 15px 0;">
+               <ul>
+                   <li><a href = "#tabs-1">Tab 1</a></li>
+                   <li><a href = "#tabs-2">Tab 2</a></li>
+                   <li><a href = "#tabs-3">Tab 3</a></li>
+                </ul>
+                   
+                <div id = "tabs-1">
+                   <p><strong>Hospital Building G</strong></p>
+                   <img src="#"  alt="">
+                   <p> 5-floor, include attick, basement. Walls: ceramic break, thicness 0.8m, 0.5m.
+                       Reconstruction 2016-2017
+                       </p>
+                </div>
+                   
+                <div id = "tabs-2">
+                   <p><strong>Complex of Hospital Buildings</strong></p>
+                   <img src="#" alt="">
+                   <p>	Reconstruction Complex of Buildings of the Garnison infirmary(military hospital in 20th century). Now - Hospital for Infectious Desease
+                       Reconstruction 2016-2017</p>
+                </div>
+                   
+                <div id = "tabs-3">
+                   <p><strong>KDPROEKT</strong></p>
+                   <img src="#"  alt="">
+                   <p> Build last century, 1968. Fasads Reconstruction glass stained glass. Project & construction worcs 2004, 2007, 2015. Not completed.</p>
+                </div>
+             </div>
+       
+           </div>
+       </div>
+    </main>
+</body>
+</html>
