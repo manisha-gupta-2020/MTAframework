@@ -13,12 +13,25 @@ h4      1.6em         1.7            1.9        2.0
 h5      1.5em         1.6            1.8        1.9
 h6      1.5em         1.6            1.8        1.9
 */
+/*
+new numbers
+
+screen   0-360px     361-640px      641-768px   768+
+         (xs)           (sm)          (md)      (lg)
+         p        1.4em         1.6em          1.8em      1.9em
+h1       1.9em         2.0em          2.3em      3em
+h2       1.8em         1.9em          2.1em      2.8em
+h3       1.7em         1.8            2.0em      2.5em
+h4       1.6em         1.7            1.9        2.0
+h5       1.5em         1.6            1.8        1.9
+h6       1.5em         1.6            1.8        1.9
+*/
 
 
 $txt-size-xs: 1.4em;
-$txt-size-sm: 1.8em;
-$txt-size-md: 1.9em;
-$txt-size-lg: 2em;
+$txt-size-sm: 1.5em;
+$txt-size-md: 1.6em;
+$txt-size-lg: 1.8em;
 
 // size of text and headings according to media query breakpoints
 
@@ -59,20 +72,12 @@ $txt-size-lg: 2em;
     h6, .h6{font-size: 1.9em;}
 }
 
-h1,h2,.h1,.h2{ 
-    padding: 1em .5em;
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{ 
     text-align: center;
     font-weight: bold;
 }
-h3,h4,h5,h6,.h3,.h4,.h5,.h6{ 
-    padding: .8em .5em;
-    text-align: center;
-    font-weight: 300;
-}
-h5,h6,.h5,.h6{ 
-    padding: .5em .3em;
-    text-align: center;
-    font-weight: 300;
+.cl-headers{
+    padding: 1.5em 0 1.5em 0;
 }
 /*******    bodycopy/paragraphs   *********/
 .para{
@@ -82,15 +87,36 @@ h5,h6,.h5,.h6{
 
 /*******inline text elements   *********/
 .cl-bold{font-weight: bold;}
-.cl-italic{font-style: italic}
+.cl-italic{font-style: italic;}
 .cl-cite{font-style: italic;}
+
+//background color for code and results
+.cl-code-bg{
+    background-color: $blue1;
+    // margin: 2em auto;
+    padding: 2em 1em 6em 1em;
+    // width: 80%;
+
+} 
+//background for code display
 .cl-code{
     font-family: monospace;
-    color: crimson;
-    background-color: #f1f1f1;
-    padding: 2px;
+    color: $code;    
+    padding: .2em ;
     font-size: 105%;
+    background-color: $white2;
+    // text-align: center;
 }
+
+//background for code display
+.cl-code-result{
+    padding: .5em ;
+    margin: .5em ;
+    background-color: $white2;
+    text-align: center;
+}
+
+
 .cl-var{
     font-style: italic;
     font-weight: bold;
@@ -106,6 +132,10 @@ h5,h6,.h5,.h6{
 .cl-valign-bottom{vertical-align: bottom;}
 .cl-valign-center{vertical-align: middle;}
 
+/*******   self alignments for flex items   *********/
+.cl-self-vcenter{align-self: center;}
+.cl-self-hcenter{justify-self: center;}
+.cl-self-center{justify-self: center; align-self: center;  }
 /*******abbreviations/addreses/bloackquote   *********/
 .cl-abbr{
     font-weight:bold;
@@ -132,12 +162,12 @@ h5,h6,.h5,.h6{
 .cl-txt-shadow2{ text-shadow:0 0 3px #ff0000, 0 0 5px #0000ff};
 
 //border styles
-.cl-bs-solid{border-style: solid;}
-.cl-bs-groove{ border-style: groove;}
-.cl-bs-dotted{ border-style: dotted;}
-.cl-bs-ridge{ border-style: ridge;}
-.cl-bs-outset{ border-style: outset;}
-.cl-bs-double{ border-style: double;}
+.cl-bs-solid{border-style: solid 1.5em $lgray;}
+.cl-bs-groove{ border-style: groove 1.5em $lgray;}
+.cl-bs-dotted{ border-style: dotted 1px $lgray;}
+.cl-bs-ridge{ border-style: ridge 1px $lgray;}
+.cl-bs-outset{ border-style: outset 1.5em $lgray;}
+.cl-bs-double{ border-style: double 1px $lgray;}
 
 
 /*******    LISTS (ul/ol)  *********/

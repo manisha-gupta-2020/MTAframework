@@ -29,6 +29,7 @@ $mgray:  #656666; //rgb(101, 102, 102)
 $dgray:  #1e1f1f; // rgb(30, 31, 31)
 $blue1:  #64d1d1; //rgb(100, 209, 209)
 $blue2:  #1d305c; //rgb(29, 48, 92) *head foot bgcolor, page txt, 
+$code:   #8f283e; //rgb(40, 64, 143)
 
 // variables for font-family
 $a-font-san-serif: Poppins,Lato,'Open Sans', sans-serif;
@@ -50,6 +51,7 @@ font-family: 'Satisfy', cursive;
 .a-body{
   font-family: $a-font-san-serif;
   background-color: $lblue;
+  color: $blue2;
 }
 
 .a-font-san-serif{font-family:$a-font-san-serif;}

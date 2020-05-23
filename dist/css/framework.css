@@ -1,0 +1,82 @@
+html {
+  background-color: #ccc;
+}
+
+body {
+  margin: 0 auto;
+  padding: 15px;
+  background-color: #e1ecf0;
+  max-width: 1200px;
+  /* font-size: 16px; */
+}
+
+section {
+  padding: 3em 0;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  padding: .5em 0;
+}
+
+.wrapper {
+  margin-bottom: 4em;
+}
+
+/* remove padding around headings in example diaply of headings */
+#headings .wrapper .cl-code-result h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  padding: 0;
+}
+
+/* for instruction display */
+.ins-list {
+  margin: 1.5em 0;
+}
+
+.ins-list li {
+  list-style-type: circle;
+  margin: 0 1em .5em;
+  font-size: 105%;
+}
+
+/* #tables h4{ margin-bottom: 1em;} */
+.note {
+  border: solid 1px #1d8d8d;
+  background-color: #fff5ee;
+  color: #ac5252e7;
+  font-size: 1em;
+  width: 80%;
+  text-align: center;
+  margin: .2em auto;
+}
+
+/* code{ overflow: auto;} */
+pre.cl-code {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-height: 200px;
+  width: auto;
+  overflow: scroll;
+}
+
+#tabletypes .row {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#tabletypes .row .col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2em 1em;
+}
+/*# sourceMappingURL=framework.css.map */
