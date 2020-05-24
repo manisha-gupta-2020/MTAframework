@@ -6,9 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="sass/css/styles.css">
     <style>
-        .wrapper {
-    
-        }
+        
         h1 {
             font-size: 2em;
         }
@@ -59,16 +57,22 @@
             border: 1px solid black;
             text-align: center;
             min-height: 50px;
-      
+        }
+        .col-07, .col-08, .col-09, .col-10, .col-11, .col-12 {
+            border: 1px solid black;
+        }
+
+        .codeSnip {
+            font-size: 1.2em;
         }
 
     </style>
 </head>
 <body class="wrapper">
     <h1>Examples With Equal Sizing</h1>
-    <h2>All Rows with Class=".col-XX" Should Add to 12 (adding the XX)</h2>
+    <h2>All Rows with Class=".col-XX" Should Add to no more than 12 (adding the XX)</h2>
+    
     <div class="examples row">
-        
         <div class="col-01">12x".col-01"</div>
         <div class="col-01">12x".col-01"</div>
         <div class="col-01">12x".col-01"</div>
@@ -99,40 +103,176 @@
         <div class="col-06">2x6Col</div>
         <div class="col-06">2x6Col</div>
     </div> 
-    <!-- end equal column width -->
+
+    <div class="codeSnip col-12">
+    <pre><code> 
+        &ltdiv class="examples row"&gt
+            &ltdiv class="col-01"&gt12x".col-01"&lt/div&gt
+            repeat 11 times
+            &ltdiv class="col-02"&gt6x".col-02"&lt/div&gt
+            repeat 5 times
+            &ltdiv class="col-03"&gt4x3Col&lt/div&gt
+            repeat 3 times
+            &ltdiv class="col-04"&gt3x4Col&lt/div&gt
+            repeat 2 times
+            &ltdiv class="col-05"&gt2x5Col&lt/div&gt
+            &ltdiv class="col-05"&gt2x5Col&lt/div&gt
+            &ltdiv class="col-06"&gt2x6Col&lt/div&gt
+            &ltdiv class="col-06"&gt2x6Col&lt/div&gt
+        &lt/div&gt 
+        NOTE class 'wrapper' used on body tag
+
+    </code></pre>
+    </div>
+ <!-- end equal column width -->
+       
     <h1>Examples With Unequal Sizing</h1>
-    <h2>All Rows with Class=".col-XX" Should Add to 12 (adding the XX)</h2>
+    <h2>All Rows with Class=".col-XX" Should Add to no more than 12 (adding the XX)</h2>
     <div class="examples row">
-        
         <div class="col-01">1x".col-01"</div>
         <div class="col-02">1x".col-02"</div>
-        <div class="col-03">1x3Col</div>
-        <div class="col-01">12x".col-01"</div>
-        <div class="col-01">12x".col-01"</div>
-        <div class="col-01">12x".col-01"</div>
-        <div class="col-01">12x".col-01"</div>
-        <div class="col-01">12x".col-01"</div>
-        <div class="col-01">12x".col-01"</div>
-        <div class="col-01">12x".col-01"</div>
-        <div class="col-01">12x".col-01"</div>
-        <div class="col-01">12x".col-01"</div>
-        <div class="col-02">6x".col-02"</div>
-        <div class="col-02">6x".col-02"</div>
-        <div class="col-02">6x".col-02"</div>
-        <div class="col-02">6x".col-02"</div>
-        <div class="col-02">6x".col-02"</div>
-        <div class="col-02">6x".col-02"</div>
-        <div class="col-03">4x3Col</div>
-        <div class="col-03">4x3Col</div>
-        <div class="col-03">4x3Col</div>
-        <div class="col-03">4x3Col</div>
-        <div class="col-04">3x4Col</div>
-        <div class="col-04">3x4Col</div>
-        <div class="col-04">3x4Col</div>
-        <div class="col-05">2x5Col</div>
-        <div class="col-05">2x5Col</div>
+        <div class="col-03">1x".col-03"</div>
+        <div class="col-06">1x".col-06"</div>
+    </div>
+<div class="codeSnip col-12">
+    <pre><code>
+        &ltdiv class="examples row"&gt
+            &ltdiv class="col-01"&gt1x".col-01"&lt/div&gt
+            &ltdiv class="col-02"&gt1x".col-02"&lt/div&gt
+            &ltdiv class="col-03"&gt1x".col-03"&lt/div&gt
+            &ltdiv class="col-06"&gt1x".col-06"&lt/div&gt
+        &lt/div&gt
+        NOTE class 'wrapper' used on body tag
+  
+    </code></pre>
+</div>
 
+
+
+    <h1>Uneven Rows Example</h1>
+ 
+            <div class="row"><!-- primary row level -->
+              <div class="col-03">
+                  <p>col-03 First Row</p>
+              </div>
+              <div class="col-07"><!-- primary row level -->
+              <!-- col-07 is placeholder / container for nested rows below -->
+                <div class="row">
+                    <!-- first secondary row -->
+                  <div class="col-12">
+                        <p>This is "col-12" nested within "col-07"</p>  
+                  </div>
+                </div>
+                <div class="row">
+                    <!-- second secondary row -->
+                  <div class="col-03">
+                     <p>col-03 nested within the col-07</p>
+                  </div>
+                  <div class="col-09">
+                      <p>col-09 nested within col-07</p>
+                  </div>
+                </div>
+                <div class="row"><!-- third secondary row -->
+                  <div class="col-06">
+                     <p>"col-06" within "col-07"</p>
+                  </div>
+                  <div class="col-06">
+                      <p>"col-06" within "col-07"</p>
+                  </div>
+                </div>
+                <div class="row"><!-- fourth secondary row -->
+                  <div class="col-08">
+                     <p>"col-08" within "col-07"</p>
+                  </div>
+                  <div class="col-04">
+                      <p>"col-04" within "col-07"</p>
+                  </div>
+                </div>     
+              </div><!-- end primary row col-07 -->
+              <div class="col-02"><!-- primary row level  -->
+                  <p>col-02 at top level row</p>
+              </div>
+            </div><!-- end primary row -->
+    
+    <div class="codeSnip col-12">
+        <pre><code>  
+                &ltdiv class="row"&gt -- primary row level --
+                  &ltdiv class="col-03"&gt
+                      &ltp&gtcol-03 First Row&lt/p&gt
+                  &lt/div&gt
+                  &ltdiv class="col-07"&gt -- primary row level -- col-07 is placeholder / container for nested rows below --
+                            &ltdiv class="row"&gt
+                                -- first secondary row --
+                            &ltdiv class="col-12"&gt
+                                    &ltp&gtThis is "col-12" nested within "col-07"&lt/p&gt  
+                            &lt/div&gt
+                            &lt/div&gt
+                            &ltdiv class="row"&gt
+                                -- second secondary row --
+                            &ltdiv class="col-03"&gt
+                                &ltp&gtcol-03 nested within the col-07&lt/p&gt
+                            &lt/div&gt
+                            &ltdiv class="col-09"&gt
+                                &ltp&gtcol-09 nested within col-07&lt/p&gt
+                            &lt/div&gt
+                            &lt/div&gt
+                            &ltdiv class="row"&gt -- third secondary row --
+                            &ltdiv class="col-06"&gt
+                                &ltp&gt"col-06" within "col-07"&lt/p&gt
+                            &lt/div&gt
+                            &ltdiv class="col-06"&gt
+                                &ltp&gt"col-06" within "col-07"&lt/p&gt
+                            &lt/div&gt
+                            &lt/div&gt
+                            &ltdiv class="row"&gt -- fourth secondary row --
+                            &ltdiv class="col-08"&gt
+                                &ltp&gt"col-08" within "col-07"&lt/p&gt
+                            &lt/div&gt
+                            &ltdiv class="col-04"&gt
+                                &ltp&gt"col-04" within "col-07"&lt/p&gt
+                            &lt/div&gt
+                            &lt/div&gt     
+                  &lt/div&gt -- end primary row col-07 --
+                  &ltdiv class="col-02"&gt -- primary row level  --
+                      &ltp&gtcol-02 at top level row&lt/p&gt
+                  &lt/div&gt
+                &lt/div&gt -- end primary row --
+        </code></pre>
     </div>
     
+    <h1>Example of moving columns</h1>
+    <div class="row">
+        <div class="col-06">First "col-06" class</div>
+        <div class="col-06">Second "col-06" class</div>
+        <div class="col-06 moveR-06">First with "col-06 moveR-06" class</div>
+        <div class="col-06 moveL-06">Second with "col-06 moveL-06" class</div>
+    </div>
+
+    <div class="codeSnip col-12">
+        <pre><code>
+            &ltdiv class="row"&gt
+                &ltdiv class="col-06"&gtFirst "col-06" class&lt/div&gt
+                &ltdiv class="col-06"&gtSecond "col-06" class&lt/div&gt
+                &ltdiv class="col-06 moveR-06"&gtFirst with "col-06 moveR-06" class&lt/div&gt
+                &ltdiv class="col-06 moveL-06"&gtSecond with "col-06 moveL-06" class&lt/div&gt
+            &lt/div&gt
+            NOTE class 'wrapper' used on body tag
+        </code></pre>
+    </div>
+    <h1>Example of using columns as margin</h1>
+    <div class="row">
+        <div class="marginL-01 col-05">First "col-05" class</div>
+        <div class="col-05 marginR-01">Second "col-05" class</div>
+    </div>
+
+    <div class="codeSnip col-12">
+        <pre><code>
+            &ltdiv class="row"&gt
+                &ltdiv class="marginL-01 col-05"&gtFirst "col-05" class&lt/div&gt
+                &ltdiv class="col-05 marginR-01"&gtSecond "col-05" class&lt/div&gt
+            &lt/div&gt
+            NOTE class 'wrapper' used on body tag
+        </code></pre>
+    </div>
 </body>
 </html>
