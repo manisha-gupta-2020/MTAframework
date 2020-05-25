@@ -45,7 +45,7 @@
 }
 
 // for applying media query at max-width
-@mixin break-max($length) {
+@mixin breakmax($length) {
     @media (max-width: $length){
         @content;
     }

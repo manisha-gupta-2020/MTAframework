@@ -213,8 +213,8 @@ h4       1.6em         1.7            1.9        2.0
 h5       1.5em         1.6            1.8        1.9
 h6       1.5em         1.6            1.8        1.9
 */
-@media screen and (min-width: 360px) {
-  p, .p {
+@media screen and (min-width: 420px) {
+  p, li {
     font-size: 1.4em;
   }
   h1, .h1 {
@@ -238,7 +238,7 @@ h6       1.5em         1.6            1.8        1.9
 }
 
 @media screen and (min-width: 640px) {
-  p {
+  p, li {
     font-size: 1.5em;
   }
   h1, .h1 {
@@ -262,7 +262,7 @@ h6       1.5em         1.6            1.8        1.9
 }
 
 @media screen and (min-width: 768px) {
-  p {
+  p, li {
     font-size: 1.6em;
   }
   h1, .h1 {
@@ -286,7 +286,7 @@ h6       1.5em         1.6            1.8        1.9
 }
 
 @media screen and (min-width: 960px) {
-  p {
+  p, li {
     font-size: 1.8em;
   }
   h1, .h1 {
@@ -318,10 +318,26 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   padding: 1.5em 0 1.5em 0;
 }
 
-/*******    bodycopy/paragraphs   *********/
+/*******    bodycopy/paragraphs font families  *********/
 .para {
   padding: 1em .5em;
   color: #000;
+}
+
+.cl-san-serif {
+  font-family: Poppins, Lato, "Open Sans", sans-serif;
+}
+
+.cl-mono {
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.cl-writing {
+  font-family: cookie, satisfy, "dancing-script", cursive;
+}
+
+.cl-disp {
+  font-family: "balsamiq sans", lobster, serif;
 }
 
 /*******inline text elements   *********/
@@ -335,11 +351,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .cl-cite {
   font-style: italic;
-}
-
-.cl-code-bg {
-  background-color: #1d8d8d;
-  padding: 2em 1em 6em 1em;
 }
 
 .cl-code {
@@ -387,6 +398,93 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .cl-valign-center {
   vertical-align: middle;
+}
+
+/*******   horizontal alignments for flex columns  *********/
+.cl-flex-h-start {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.cl-flex-h-end {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.cl-flex-h-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cl-flex-h-sp-around {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.cl-flex-h-sp-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/*******   horizontal alignments for flex rows  *********/
+.cl-flex-v-start {
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+}
+
+.cl-flex-v-end {
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+}
+
+.cl-flex-v-center {
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.cl-flex-v-sp-around {
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+}
+
+.cl-flex-v-sp-between {
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+}
+
+/*******   vertical alignments for flex items in same row *********/
+.cl-flex-i-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cl-flex-i-start {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.cl-flex-i-end {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.cl-flex-i-stretch {
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.cl-flex-i-baseline {
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 /*******   self alignments for flex items   *********/
@@ -450,27 +548,27 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 .cl-bs-solid {
-  border-style: solid 1.5em #c2c2c2;
+  border: solid 0.1em #c2c2c2;
 }
 
 .cl-bs-groove {
-  border-style: groove 1.5em #c2c2c2;
-}
-
-.cl-bs-dotted {
-  border-style: dotted 1px #c2c2c2;
+  border: groove 0.2em #c2c2c2;
 }
 
 .cl-bs-ridge {
-  border-style: ridge 1px #c2c2c2;
+  border: ridge 0.1em #c2c2c2;
+}
+
+.cl-bs-dotted {
+  border: dotted 0.1em #c2c2c2;
 }
 
 .cl-bs-outset {
-  border-style: outset 1.5em #c2c2c2;
+  border: outset 0.2em #c2c2c2;
 }
 
 .cl-bs-double {
-  border-style: double 1px #c2c2c2;
+  border: double 0.1em #c2c2c2;
 }
 
 /*******    LISTS (ul/ol)  *********/
@@ -504,6 +602,13 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .cl-lsp-out {
   list-style: outside;
+}
+
+.hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 /*******   margin classes    *********/
@@ -612,11 +717,7 @@ html {
   padding: 0;
 }
 
-.col-01, .col-02, .col-03, .col-04, .col-05, .col-06, .col-07, .col-08, .col-09, .col-10, .col-11, .col-12, .col,
-.col-pl-01, .col-pl-02, .col-pl-03, .col-pl-04, .col-pl-05, .col-pl-06, .col-pl-07, .col-pl-08, .col-pl-09, .col-pl-10, .col-pl-11, .col-pl-12, .col-pl,
-.col-tb-01, .col-tb-02, .col-tb-03, .col-tb-04, .col-tb-05, .col-tb-06, .col-tb-07, .col-tb-08, .col-tb-09, .col-tb-10, .col-tb-11, .col-tb-12, .col-tb,
-.col-tl-01, .col-tl-02, .col-tl-03, .col-tl-04, .col-tl-05, .col-tl-06, .col-tl-07, .col-tl-08, .col-tl-09, .col-tl-10, .col-tl-11, .col-tl-12, .col-tl,
-.col-lg-01, .col-lg-02, .col-lg-03, .col-lg-04, .col-lg-05, .col-lg-06, .col-lg-07, .col-lg-08, .col-lg-09, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg {
+.col-01, .col-02, .col-03, .col-04, .col-05, .col-06, .col-07, .col-08, .col-09, .col-10, .col-11, .col-12, .col, .col-pl-01, .col-pl-02, .col-pl-03, .col-pl-04, .col-pl-05, .col-pl-06, .col-pl-07, .col-pl-08, .col-pl-09, .col-pl-10, .col-pl-11, .col-pl-12, .col-pl, .col-tb-01, .col-tb-02, .col-tb-03, .col-tb-04, .col-tb-05, .col-tb-06, .col-tb-07, .col-tb-08, .col-tb-09, .col-tb-10, .col-tb-11, .col-tb-12, .col-tb, .col-tl-01, .col-tl-02, .col-tl-03, .col-tl-04, .col-tl-05, .col-tl-06, .col-tl-07, .col-tl-08, .col-tl-09, .col-tl-10, .col-tl-11, .col-tl-12, .col-tl, .col-lg-01, .col-lg-02, .col-lg-03, .col-lg-04, .col-lg-05, .col-lg-06, .col-lg-07, .col-lg-08, .col-lg-09, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg {
   position: relative;
   width: 100%;
   min-height: 1px;
@@ -679,8 +780,6 @@ html {
   -ms-flex: 0 0 50%;
   flex: 0 0 50%;
   max-width: 50%;
-  -ms-flex-wrap: row;
-      flex-wrap: row;
 }
 
 .col-07 {
@@ -1745,6 +1844,7 @@ html {
   }
 }
 
+/*ab - inspired by bootstrap*/
 .cl-highlight-green {
   background-color: #68ed7e;
 }
@@ -2247,26 +2347,20 @@ input[type=reset], .cl-btn-reset {
   cursor: pointer;
 }
 
-.cl-btn {
-  font-size: 100%;
-  padding: 5px 10px;
-  border-radius: 1px;
-}
-
 .cl-btn-xsm {
   font-size: 70%;
 }
 
 .cl-btn-sm {
-  font-size: 85%;
+  font-size: 90%;
 }
 
 .cl-btn-lg {
-  font-size: 110%;
+  font-size: 120%;
 }
 
 .cl-btn-xlg {
-  font-size: 205%;
+  font-size: 220%;
 }
 
 .cl-btn-active {
@@ -2302,4 +2396,129 @@ input[type=reset], .cl-btn-reset {
   -webkit-box-shadow: 2px -2px 1px #ccc;
           box-shadow: 2px -2px 1px #ccc;
 }
+
+.jumbotron {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  background-color: #c2c2c2;
+  border-radius: 0.3rem;
+}
+
+@media scrren and (min-width: 768px) {
+  .jumbotron {
+    padding: 4rem 2rem;
+  }
+}
+
+.jumbotron-fluid {
+  padding-right: 0;
+  padding-left: 0;
+  border-radius: 0;
+}
+
+.jumbotron-img {
+  margin-top: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.5))), url("../images/jumbotron-img7.jpg");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../images/jumbotron-img7.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+/*m
+<div class="jumbotron">
+  <h1 class="h1"> Swiftly </h1>
+  <h4> A framework for making Quick and Innovative websites  </h4>
+  
+  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <hr class="my-4">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+</div>
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Fluid jumbotron</h1>
+    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+  </div>
+</div>
+
+*/
+/********** start classes for all tabbed panels component ***********/
+/* Style the horizontal tabs */
+.htabs {
+  border: solid 1px #8b0000;
+  padding: 2em auto;
+  margin: 2em 0;
+}
+
+.hpanelh {
+  padding: 1em;
+}
+
+.hpanelb {
+  padding: 2em;
+  height: 300px;
+}
+
+.hpanelh ul li {
+  display: inline-block;
+}
+
+/* Style the vertical tabs */
+.vtabs {
+  border: solid 1px #8b0000;
+  padding: 2em auto;
+}
+
+.vpanelb {
+  height: 300px;
+}
+
+.vpanelh ul li {
+  display: block;
+}
+
+/********** start common classes for all tabs ***********/
+/* Style the links inside the tab header */
+.panelh ul li {
+  padding: 1em .5em;
+  margin: .25em;
+  width: auto;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+@media screen and (min-width: 420px) {
+  .panelh ul li {
+    padding: 1em 1em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .panelh ul li {
+    padding: 1.5em 2em;
+  }
+}
+
+/* Change background color of buttons on hover */
+.panelh li:hover {
+  background-color: #f7f7f7;
+  color: #8b0000;
+  border: solid 1px #8b0000;
+}
+
+/* Create an active/current "tab button" class */
+.panelh li.active {
+  background-color: #f7f7f7;
+  color: #8b0000;
+  border: solid 1px #8b0000;
+}
+
+/********** end classes for all tabbed panels component ***********/
 /*# sourceMappingURL=styles.css.map */

@@ -17,13 +17,17 @@
     <!-- link to bootstrap glyphicon cdn -->
     <!-- <link rel="stylesheet" href="<link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">"> -->
 
-    <link rel="stylesheet" href="dist/css/styles.min.css">
-    <!-- <link rel="stylesheet" href="dist/css/tables.css"> -->
-    <!-- <link rel="stylesheet" href="dist/css/buttons.css"> -->
-    <link rel="stylesheet" href="dist/css/framework.min.css">
+    <!-- css file meant to be distributed with framework -->
+    <link rel="stylesheet" href="../css/styles.min.css">
+
+    <!-- link for styling meant for framework website itself -->
+    <link rel="stylesheet" href="../css/framework.min.css">
 
     <!--  link to jquery cdn-->
     <script src="dist/scripts/jquery-3.4.1.min.js"></script>
+
+    <!-- link to framework jquery -->
+    <script src="../scripts/framework-jq.js"></script>
 
     <title>MTA Framework for website development. Responsive, easy to use, uses HTMl, CSS, Javascript </title>
 </head>
@@ -59,7 +63,7 @@
                     <li> Highlighter classes are available to highlight a particular row <code class="cl-code">.cl-hightlight-green</code> , <code class="cl-code">.cl-highlight-yellow</code> and <code class="cl-code">.cl-highlight-alert</code></li>  
                 </ul>
             </div>
-            <code >
+            <code ">
                 <pre class="cl-code">
                     &lttable class="cl-table-basic"&gt
                         &ltcaption&gt Basic table&lt/caption&gt
@@ -198,34 +202,35 @@
         </div>
 
         <h4 class="cl-headers">Responsive Tables</h4>
-        <p class="cl-bold"> We provide three breakpoints for responsive tables.
-            <ul class="ins-list">
-                <li> A small table of 3X3 is responsive till the small breakpoint at 640px. Use class <code class="cl-code">.cl-res-table-sm</code>  </li>
-                <li>A medium size table of 5x3 is responsive till the medium breakpoint at 768px. Use class <code class="cl-code">.cl-res-table-md</code>  </li>
-                <li>A larger table, larger than medium,  is responsive till the last breakpoint at 960px. Use class <code class="cl-code">.cl-res-table-lg</code>  </li>
-                <li>Pre-styled table. To use the styling applied to the folowing tables use class <code class="cl-code">.cl-table</li>
-            </ul>
-            <p class="note">
-                In order to have the column heading display on the responsive table they need to be set on the td.< br />
-                For example for the small table you will have to specify the following in the media query. There are three column headings so we go upto nth-of-type(3).
-            </p>
-            <code >
-                <pre class="cl-code">
-@media screen and(max-width: 640px){
-    .cl-res-table-sm td:nth-of-type(1):before {
-        content: "Heading Col1";
-        }
-        .cl-res-table-sm td:nth-of-type(2):before {
-        content: "Heading Col2";
-        }
-        .cl-res-table-sm td:nth-of-type(3):before {
-        content: "Heading Col3";
-        }           
-}
-}
-            </pre>
-            </code>
+        <p class="cl-bold"> We provide three breakpoints for responsive tables.</p>
+        <ul class="ins-list">
+            <li> A small table of 3X3 is responsive till the small breakpoint at 640px. Use class <code class="cl-code">.cl-res-table-sm</code>  </li>
+            <li>A medium size table of 5x3 is responsive till the medium breakpoint at 768px. Use class <code class="cl-code">.cl-res-table-md</code>  </li>
+            <li>A larger table, larger than medium,  is responsive till the last breakpoint at 960px. Use class <code class="cl-code">.cl-res-table-lg</code>  </li>
+            <li>Pre-styled table. To use the styling applied to the folowing tables use class <code class="cl-code">.cl-table</li>
+        </ul>
+        <p class="note">
+            In order to have the column heading display on the responsive table they need to be set on the td.< br />
+            For example for the small table you will have to specify the following in the media query. There are three column headings so we go upto nth-of-type(3).
         </p>
+        
+        <code>
+            <pre class="cl-code">
+@media screen and(max-width: 640px){
+.cl-res-table-sm td:nth-of-type(1):before {
+    content: "Heading Col1";
+    }
+    .cl-res-table-sm td:nth-of-type(2):before {
+    content: "Heading Col2";
+    }
+    .cl-res-table-sm td:nth-of-type(3):before {
+    content: "Heading Col3";
+    }           
+}
+}
+        </pre>
+        </code>
+        
         <section id="id-responsive-table-sm">
  
         <table class="cl-table cl-res-table-sm">
@@ -392,10 +397,11 @@
                 <figcaption>Heading sizing chart</figcaption>
             </figure> -->
 
-            <div class="wrapper">
+            <div class="wrapper ">
                 <h4>Using element tag h1 through h6 </h4>
-                <div class=" row cl-code-bg ">                    
-                    <code class="col cl-align-center  cl-self-center"> 
+                <div class=" row head-ex">                    
+                <!-- <div class=" row cl-code-bg ">                     -->
+                    <code class="col cl-align-center  cl-self-center cl-bs-solid"> 
                         <pre class="cl-code">
 &lth1&gt Heading1 &lt/h1&gt <br />
 &lth1&gt Heading2 &lt/h1&gt <br />
@@ -404,10 +410,11 @@
 &lth1&gt Heading5 &lt/h1&gt <br />
 &lth1&gt Heading6 &lt/h1&gt <br />
                         </pre>
+
                     </code>    
 
                 
-                    <div class="col cl-code-result ">
+                    <div class="col cl-code-result cl-bs-solid ">
                         <h1>Heading 1</h1>
                         <h2>Heading 2</h2>
                         <h3>Heading 3</h3>
@@ -420,8 +427,9 @@
                 <br /> 
             <div class="wrapper">    
                 <h4>Heading style on p element using classes h1 through h6 </h4>
-                <div class=" row cl-code-bg ">                    
-                    <code class="col  cl-align-center cl-self-center"> 
+                <div class=" row head-ex ">                    
+                <!-- <div class=" row cl-code-bg ">                     -->
+                    <code class="col  cl-align-center cl-self-center cl-bs-solid"> 
                         <pre class="cl-code ">
 &ltp class="h1"&gtHeading 1&lt/p&gt <br />
 &ltp class="h2"&gtHeading 2&lt/p&gt <br />
@@ -432,7 +440,7 @@
                         </pre>
                     </code>               
                 
-                    <div class="col  cl-code-result">
+                    <div class="col  cl-code-result cl-bs-solid">
                         <p class="h1">Heading 1</p>
                         <p class="h2">Heading 2</p>
                         <p class="h3">Heading 3</p>
@@ -499,7 +507,7 @@
             </p>
         </div>
         <div>
-            <h4>Example of bloackquote using class <code class="cl-code">cl-blockquote</code> </h4>
+            <h4>Example of blockquote using class <code class="cl-code">cl-blockquote</code> </h4>
             <p class="cl-blockquote">
                 <p>Here is a quote from WWF's website:</p>
                 <p class= "cl-cite">"http://www.worldwildlife.org/who/index.html"</p>
@@ -539,12 +547,6 @@
             <!-- <p class=" button cl-bs-double">Double</p> -->
 
         </div>
-
-
-
-
-
-
     </section>
 
     <section id="forms">
@@ -566,6 +568,9 @@
                 <option value="Safari">
             </datalist><br />
             
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date"> <br />
+
             <label for="month">Month:</label>
             <select id="month">            
                 <option value="1">January</option>
@@ -613,6 +618,75 @@
             </div>
         </fieldset>
     </section>
+
+    <section id="tabPanels">
+        <section class="tabExamples">
+            <!-- horizontal tabs -->
+            <div class="wrapper-fluid htabs">
+                <div class="row">
+                    <div class="col-12 panelh hpanelh">
+                        <ul>
+                            <li class=" cl-btn tablinks" onclick="openTab(event, 'tab1')" id="defaultOpen" role="button">Tab1</li>
+                            <li class=" cl-btn tablinks" onclick="openTab(event, 'tab2')" role="button">Tab2</li>
+                            <li class=" cl-btn tablinks" onclick="openTab(event, 'tab3')" role="button">Tab3</li>
+                        </ul>
+        
+                    </div>
+                    <div class="col-12 hpanelb">
+                        <div id="tab1" class="tabcontent">
+                        <h3>Tab1 heading</h3>
+                        <p>Content for first tab goes here.</p>
+                        </div>
+        
+                        <div id="tab2" class="tabcontent">
+                            <h3>Tab2 heading</h3>
+                            <p>Content for second tab goes here.</p>
+                        </div>
+        
+                        <div id="tab3" class="tabcontent">
+                            <h3>Tab3 heading</h3>
+                            <p>Content for third tab goes here.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="tabExamples">
+            <!-- vertical tabs  -->
+            <div class="wrapper-fluid vtabs">
+                <div class="row">
+                    <div class="col-03 panelh vpanelh">
+                        <ul>
+                            <li class=" cl-btn tablinks cl-txt-center" onclick="openTab(event, 'tab1v')" id="defaultOpen2" role="button">Tab1</li>
+                            <li class=" cl-btn tablinks" onclick="openTab(event, 'tab2v')" role="button">Tab2</li>
+                            <li class=" cl-btn tablinks" onclick="openTab(event, 'tab3v')" role="button">Tab3</li>
+                        </ul>
+        
+                    </div>
+                    <div class="col-09 vpanelb">
+                        <div id="tab1v" class="tabcontent">
+                        <h3>Heading for tab1</h3>
+                        <p>Content for first tab goes here.</p>
+                        </div>
+        
+                        <div id="tab2v" class="tabcontent">
+                            <h3>Heading for tab2</h3>
+                            <p>Content for second tab goes here.</p>
+                        </div>
+        
+                        <div id="tab3v" class="tabcontent">
+                            <h3>Heading for tab3</h3>
+                            <p>Content for third tab goes here.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+
+
+    <script src="../scripts/framework.js"></script>
  </body>
 </html>
 
