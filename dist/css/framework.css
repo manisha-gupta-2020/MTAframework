@@ -1,29 +1,30 @@
 html {
-  background-color: #ccc;
+  background-color: #460909;
 }
 
 body {
   margin: 0 auto;
   padding: 15px;
-  background-color: #e1ecf0;
+  background-color: #f7f7f7;
   max-width: 1200px;
   /* font-size: 16px; */
 }
 
 section {
-  padding: 3em 0;
+  padding: 1.5em 0;
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   padding: .5em 0;
 }
 
-.wrapper {
+.wrapper, .wrapper-fluid {
   margin-bottom: 4em;
 }
 
-/* remove padding around headings in example diaply of headings */
-#headings .wrapper .cl-code-result h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+/* remove padding around headings in example display of headings */
+.head-ex h1, .head-ex h2, .head-ex h3, .head-ex h4, h5, .head-ex h6,
+.head-ex .h1, .head-ex .h2, .head-ex .h3, .head-ex .h4, .head-ex .h5, .head-ex .h6 {
   padding: 0;
 }
 
@@ -64,6 +65,10 @@ pre.cl-code {
   overflow: scroll;
 }
 
+.scroll {
+  overflow: scroll;
+}
+
 #tabletypes .row {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -78,5 +83,58 @@ pre.cl-code {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 2em 1em;
+}
+
+/* ************** start css for jumbotron on index.html  ***************** */
+.jumbotron h1, .jumbotron h4, .jumbotron p {
+  color: #fff;
+}
+
+.cl-btn {
+  background-color: darkred;
+  color: #f2f2f2;
+  margin: .2em 0;
+  padding: .5em;
+}
+
+#jumbotron h1 {
+  margin-top: 4%;
+  font-size: 5rem;
+}
+
+#jumbotron h4 {
+  margin-top: 2rem;
+}
+
+#jumbotron .row {
+  margin-top: 14%;
+  padding-left: 57%;
+}
+
+.jumbotron-img {
+  opacity: .8;
+}
+
+.jumbotron-height {
+  height: 600px;
+}
+
+.nav-bg {
+  margin: 0 auto;
+}
+
+.nav-bg li {
+  padding: 2em .5em;
+  font-size: 2em;
+}
+
+#j-code {
+  overflow: scroll;
+}
+
+/* ************** end css for jumbotron on index.html  ***************** */
+.cl-code-bg {
+  background-color: #460909;
+  padding: 2em 1em 4em 1em;
 }
 /*# sourceMappingURL=framework.css.map */

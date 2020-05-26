@@ -36,7 +36,7 @@ $txt-size-lg: 1.8em;
 // size of text and headings according to media query breakpoints
 
 @media screen and (min-width: $breakpoint-xs){ 
-    p, .p{ font-size: $txt-size-xs; }
+    p, li{ font-size: $txt-size-xs; }
     h1, .h1{font-size: 1.9em;}
     h2, .h2{font-size: 1.8em;}
     h3, .h3{font-size: 1.7em;}
@@ -45,7 +45,7 @@ $txt-size-lg: 1.8em;
     h6, .h6{font-size: 1.5em;}
 }
 @media screen and (min-width: $breakpoint-sm){
-    p{ font-size: $txt-size-sm; }
+    p,li{ font-size: $txt-size-sm; }
     h1, .h1{font-size: 2em;}
     h2, .h2{font-size: 1.9em;}
     h3, .h3{font-size: 1.8em;}
@@ -54,7 +54,7 @@ $txt-size-lg: 1.8em;
     h6, .h6{font-size: 1.6em;}
 }
 @media screen and (min-width: $breakpoint-md){
-    p{ font-size: $txt-size-md; }
+    p,li{ font-size: $txt-size-md; }
     h1, .h1{font-size: 2.3em;}
     h2, .h2{font-size: 2.1em;}
     h3, .h3{font-size: 2em;}
@@ -63,7 +63,7 @@ $txt-size-lg: 1.8em;
     h6, .h6{font-size: 1.8;}
 }
 @media screen and (min-width: $breakpoint-lg){
-    p{ font-size: $txt-size-lg; }
+    p,li{ font-size: $txt-size-lg; }
     h1, .h1{font-size: 3em;}
     h2, .h2{font-size: 2.8em;}
     h3, .h3{font-size: 2.5em;}
@@ -79,11 +79,16 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
 .cl-headers{
     padding: 1.5em 0 1.5em 0;
 }
-/*******    bodycopy/paragraphs   *********/
+/*******    bodycopy/paragraphs font families  *********/
 .para{
     padding: 1em .5em;
     color: $black;
 }
+
+.cl-san-serif{  font-family: $a-font-san-serif; }
+.cl-mono{   font-family: $a-font-mono;  }
+.cl-writing{    font-family: $a-fontwriting;}
+.cl-disp{   font-family: $a-font-disp;}
 
 /*******inline text elements   *********/
 .cl-bold{font-weight: bold;}
@@ -91,13 +96,13 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
 .cl-cite{font-style: italic;}
 
 //background color for code and results
-.cl-code-bg{
-    background-color: $blue1;
-    // margin: 2em auto;
-    padding: 2em 1em 6em 1em;
-    // width: 80%;
+// .cl-code-bg{
+//     background-color: $blue1;
+//     // margin: 2em auto;
+//     padding: 2em 1em 2em 1em;
+//     // width: 80%;
 
-} 
+// } 
 //background for code display
 .cl-code{
     font-family: monospace;
@@ -132,6 +137,30 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
 .cl-valign-bottom{vertical-align: bottom;}
 .cl-valign-center{vertical-align: middle;}
 
+/*******   horizontal alignments for flex columns  *********/
+.cl-flex-h-start{justify-content: flex-start;}
+.cl-flex-h-end{justify-content: flex-end;}
+.cl-flex-h-center{justify-content: center;}
+.cl-flex-h-sp-around{justify-content: space-around;}
+.cl-flex-h-sp-between{justify-content: space-between;}
+
+/*******   horizontal alignments for flex rows  *********/
+.cl-flex-v-start{align-content: flex-start;}
+.cl-flex-v-end{align-content: flex-end;}
+.cl-flex-v-center{align-content: center;}
+.cl-flex-v-sp-around{align-content: space-around;}
+.cl-flex-v-sp-between{align-content: space-between;}
+
+/*******   vertical alignments for flex items in same row *********/
+.cl-flex-i-center{align-items: center;}
+.cl-flex-i-start{align-items: flex-start;}
+.cl-flex-i-end{align-items: flex-end;}
+.cl-flex-i-stretch{align-items: stretch;}
+.cl-flex-i-baseline{align-items: baseline;}
+
+
+
+
 /*******   self alignments for flex items   *********/
 .cl-self-vcenter{align-self: center;}
 .cl-self-hcenter{justify-self: center;}
@@ -162,12 +191,12 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
 .cl-txt-shadow2{ text-shadow:0 0 3px #ff0000, 0 0 5px #0000ff};
 
 //border styles
-.cl-bs-solid{border-style: solid 1.5em $lgray;}
-.cl-bs-groove{ border-style: groove 1.5em $lgray;}
-.cl-bs-dotted{ border-style: dotted 1px $lgray;}
-.cl-bs-ridge{ border-style: ridge 1px $lgray;}
-.cl-bs-outset{ border-style: outset 1.5em $lgray;}
-.cl-bs-double{ border-style: double 1px $lgray;}
+.cl-bs-solid{border: solid .1em $lgray;}
+.cl-bs-groove{ border: groove .2em $lgray;}
+.cl-bs-ridge{ border: ridge .1em $lgray;}
+.cl-bs-dotted{ border: dotted .1em $lgray;}
+.cl-bs-outset{ border: outset .2em $lgray;}
+.cl-bs-double{ border: double .1em $lgray;}
 
 
 /*******    LISTS (ul/ol)  *********/
@@ -201,6 +230,12 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
 //list style type
 
 
+.hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
 
 
 /*******   margin classes    *********/

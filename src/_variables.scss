@@ -16,9 +16,9 @@ $tbl-caption:rgb(151, 151, 209);
 $tbl-background: #fff; //rgb(223, 223, 247);
 $tbl-hdr-background: #dedede;
 $tbl-link: #008cba;
-$brk-md: 500px;
-$brk-lg: 760px;
-$brk-xl: 1000px;
+// $brk-md: 500px;
+// $brk-lg: 760px;
+// $brk-xl: 1000px;
 $border-radius: 4px;
 
 //maybe set these to inherit from browser
@@ -29,7 +29,7 @@ $text-color-default: $black;
 $button-background: #dedede;
 $button-border: #ccc;
 
-$breakpoint-xs: 360px;
+$breakpoint-xs: 420px;
 $breakpoint-xsm: 500px; //used only for tables
 $breakpoint-sm: 640px;
 $breakpoint-md: 768px;
@@ -47,4 +47,11 @@ $dgray:  #1e1f1f; // rgb(30, 31, 31)
 $blue1:  #1d8d8d; //rgb(100, 209, 209)
 $blue2:  #1d305c; //rgb(29, 48, 92) *head foot bgcolor, page txt, 
 $code:   #e61212; //
+$darkred: #8b0000;
+
+// variables for font-family
+$a-font-san-serif: Poppins,Lato,'Open Sans', sans-serif;
+$a-font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$a-fontwriting: cookie, satisfy, "dancing-script" ,cursive;
+$a-font-disp: "balsamiq sans",lobster, serif;
 
